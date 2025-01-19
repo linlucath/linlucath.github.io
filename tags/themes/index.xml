@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Themes on linlu-cath</title>
+        <title>Themes on linlu2cath</title>
         <link>https://linlucath.github.io/tags/themes/</link>
-        <description>Recent content in Themes on linlu-cath</description>
+        <description>Recent content in Themes on linlu2cath</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>linlu-cath</copyright>
+        <copyright>linlu2cath</copyright>
         <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://linlucath.github.io/tags/themes/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Markdown Syntax Guide</title>
         <link>https://linlucath.github.io/p/markdown-syntax-guide/</link>
