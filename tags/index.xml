@@ -6,31 +6,6 @@
         <description>Recent content in Tags on linlu2cath</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>linlu2cath</copyright>
-        <lastBuildDate>Tue, 21 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://linlucath.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Markdown</title>
-        <link>https://linlucath.github.io/tags/markdown/</link>
-        <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://linlucath.github.io/tags/markdown/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Tag With Whitespaces</title>
-        <link>https://linlucath.github.io/tags/tag-with-whitespaces/</link>
-        <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://linlucath.github.io/tags/tag-with-whitespaces/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Text</title>
-        <link>https://linlucath.github.io/tags/text/</link>
-        <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://linlucath.github.io/tags/text/</guid>
-        <description></description>
-        </item>
-        
+        <copyright>linlu2cath</copyright><atom:link href="https://linlucath.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
