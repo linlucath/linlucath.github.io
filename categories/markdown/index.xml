@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Roadmap on linlu2cath</title>
-        <link>https://linlucath.github.io/categories/roadmap/</link>
-        <description>Recent content in Roadmap on linlu2cath</description>
+        <title>Markdown on linlu2cath</title>
+        <link>https://linlucath.github.io/categories/markdown/</link>
+        <description>Recent content in Markdown on linlu2cath</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>linlu2cath</copyright>
-        <lastBuildDate>Tue, 21 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://linlucath.github.io/categories/roadmap/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>CS的基本框架</title>
-        <link>https://linlucath.github.io/p/cs%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A1%86%E6%9E%B6/</link>
-        <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://linlucath.github.io/p/cs%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A1%86%E6%9E%B6/</guid>
-        <description>&lt;img src="https://linlucath.github.io/p/cs%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A1%86%E6%9E%B6/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post CS的基本框架" /&gt;&lt;h1 id=&#34;cs的基本框架--自顶向下方法&#34;&gt;CS的基本框架&amp;ndash;自顶向下方法
-&lt;/h1&gt;&lt;h2 id=&#34;为什么要学习cscomputer-science&#34;&gt;为什么要学习CS(computer science)?
-&lt;/h2&gt;&lt;p&gt;偶然间恍然察觉,我们似乎早已习惯了生活中的magic thing,我们不知其原理,却能享受它们带来的便利.而这直接导致了我们对新鲜事物的情绪化评价&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <lastBuildDate>Tue, 21 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://linlucath.github.io/categories/markdown/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Markdown学习笔记</title>
         <link>https://linlucath.github.io/p/markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
