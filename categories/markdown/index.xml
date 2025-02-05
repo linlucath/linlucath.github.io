@@ -84,6 +84,83 @@
 &lt;/h2&gt;&lt;p&gt;下面我们将介绍Markdown的语法规则&lt;/p&gt;
 </description>
         </item>
+        <item>
+        <title>Markdown学习笔记</title>
+        <link>https://linlucath.github.io/p/markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+        <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://linlucath.github.io/p/markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+        <description>&lt;img src="https://linlucath.github.io/p/markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post Markdown学习笔记" /&gt;&lt;h1 id=&#34;markdown从入门到会写&#34;&gt;Markdown从入门到会写
+&lt;/h1&gt;&lt;h2 id=&#34;什么是markdown&#34;&gt;什么是Markdown?
+&lt;/h2&gt;&lt;p&gt;Markdown是一种简单易学,无需花很多时间配置环境,且能使文章可以达到非常令人满意的排版的语言&lt;/p&gt;
+&lt;h2 id=&#34;创建markdown文件&#34;&gt;创建Markdown文件
+&lt;/h2&gt;&lt;p&gt;首先在一个心仪的位置新建一个,文本文件,&lt;img src=&#34;https://linlucath.github.io/index.assets/image-20250121135752656.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250121135752656&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;选中这个文件,按一下键盘上的F2(或Fn+F2),然后修改其后缀名为.md&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linlucath.github.io/index.assets/image-20250121135922114.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250121135922114&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;然后右键此文件,使用VSCode打开&lt;img src=&#34;https://linlucath.github.io/index.assets/image-20250121140030255.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250121140030255&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;点击右上角的&lt;img src=&#34;https://linlucath.github.io/index.assets/image-20250121140105895.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250121140105895&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;将以下内容复制到文件中&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Markdown&#34; data-lang=&#34;Markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;# Hello World
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;$it&amp;#39;s~pretty~interesting!$ 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;当看到下图右方的文本时,你已经成功完成了学习Markdown之前的所有准备&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://linlucath.github.io/index.assets/image-20250121140649076.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250121140649076&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;markdown语法介绍&#34;&gt;Markdown语法介绍
+&lt;/h2&gt;&lt;p&gt;下面我们将介绍Markdown的语法规则&lt;/p&gt;
+</description>
+        </item>
         
     </channel>
 </rss>
