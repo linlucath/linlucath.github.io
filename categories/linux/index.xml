@@ -14,18 +14,164 @@
         
         <guid>https://linlucath.github.io/p/linux%E6%9C%80%E6%9C%80%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/</guid>
         <description>&lt;img src="https://linlucath.github.io/p/linux%E6%9C%80%E6%9C%80%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post linux最最基本指令" /&gt;&lt;h1 id=&#34;linux最最基本指令及由来&#34;&gt;linux最最基本指令及由来
-&lt;/h1&gt;&lt;h2 id=&#34;cd-change-directory&#34;&gt;cd (change directory)
-&lt;/h2&gt;&lt;h3 id=&#34;语法&#34;&gt;语法
-&lt;/h3&gt;&lt;p&gt;&lt;code&gt;cd [directory]&lt;/code&gt;
-例如 &lt;code&gt;cd ./home/linlu2cath/Documents&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;作用&#34;&gt;作用
-&lt;/h3&gt;&lt;p&gt;切换目录至 [directory]&lt;/p&gt;
-&lt;h2 id=&#34;ls-list&#34;&gt;ls (list)
-&lt;/h2&gt;&lt;h3 id=&#34;语法-1&#34;&gt;语法
-&lt;/h3&gt;&lt;p&gt;&lt;code&gt;ls [directory]&lt;/code&gt; or &lt;code&gt;ls&lt;/code&gt;&lt;br&gt;
-例如 &lt;code&gt;ls ./home/linlu2cath/Documents&lt;/code&gt; 或 &lt;code&gt;ls&lt;/code&gt;(列出当前目录下所有文件)&lt;/p&gt;
-&lt;h3 id=&#34;作用-1&#34;&gt;作用
-&lt;/h3&gt;&lt;p&gt;列出 [directory] 下所有文件&lt;/p&gt;
+&lt;/h1&gt;&lt;h2 id=&#34;遨游于文件系统&#34;&gt;遨游于文件系统
+&lt;/h2&gt;&lt;h3 id=&#34;pwd-print-working-directory&#34;&gt;pwd &lt;em&gt;(print working directory)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;pwd&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;输出当前工作目录&lt;/p&gt;
+&lt;h3 id=&#34;cd-change-directory&#34;&gt;cd &lt;em&gt;(change directory)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-1&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;cd [target path]&lt;/code&gt;&lt;br&gt;
+例如&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ./home/linlu2cath/Documents
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;作用-1&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;切换目录至 [ &lt;em&gt;target path&lt;/em&gt; ]&lt;/p&gt;
+&lt;h3 id=&#34;ls-list&#34;&gt;ls &lt;em&gt;(list)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-2&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;ls [directory]&lt;/code&gt; or &lt;code&gt;ls&lt;/code&gt; (对象为当前目录)&lt;br&gt;
+例如&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls ./home/linlu2cath/Documents
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;作用-2&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;列出 [ &lt;em&gt;directory&lt;/em&gt; ] 下所有文件&lt;/p&gt;
+&lt;h4 id=&#34;常用选项&#34;&gt;常用选项
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;ls -l&lt;/code&gt;( &lt;em&gt;long&lt;/em&gt; )&lt;br&gt;
+列出 [ &lt;em&gt;directory&lt;/em&gt; ] 下所有文件及文件属性 &lt;br&gt;
+&lt;code&gt;ls -a&lt;/code&gt;( &lt;em&gt;all&lt;/em&gt; )&lt;br&gt;
+列出 [ &lt;em&gt;directory&lt;/em&gt; ] 下所有文件及隐藏文件&lt;/p&gt;
+&lt;h3 id=&#34;clear-clear&#34;&gt;clear &lt;em&gt;(clear)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-3&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;clear&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-3&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;清除屏幕&lt;/p&gt;
+&lt;h4 id=&#34;快捷方式&#34;&gt;快捷方式
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;ctrl+l&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;xdg-open-x-desktop-group-open&#34;&gt;xdg-open &lt;em&gt;(x desktop group open)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-4&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;xdg-open [file]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-4&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;打开 [ &lt;em&gt;file&lt;/em&gt; ] ( &lt;em&gt;以适当的软件打开&lt;/em&gt; )&lt;/p&gt;
+&lt;h2 id=&#34;将文件玩弄于股掌之中&#34;&gt;将文件玩弄于股掌之中
+&lt;/h2&gt;&lt;h3 id=&#34;cp-copy&#34;&gt;cp &lt;em&gt;(copy)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-5&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;cp [source] [destination]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-5&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;将 [ &lt;em&gt;source&lt;/em&gt; ] 复制至 [ &lt;em&gt;destination&lt;/em&gt; ]&lt;/p&gt;
+&lt;h3 id=&#34;mv-move&#34;&gt;mv &lt;em&gt;(move)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-6&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;mv [source] [destination]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-6&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;将 [ &lt;em&gt;source&lt;/em&gt; ] 移动至 [ &lt;em&gt;destination&lt;/em&gt; ]&lt;/p&gt;
+&lt;h3 id=&#34;rm-remove&#34;&gt;rm &lt;em&gt;(remove)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-7&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;rm [file]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-7&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;删除 [ &lt;em&gt;file&lt;/em&gt; ]&lt;/p&gt;
+&lt;h3 id=&#34;touch-touch&#34;&gt;touch &lt;em&gt;(touch)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-8&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;touch [file]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-8&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;创建 [ &lt;em&gt;file&lt;/em&gt; ]或更新 [ &lt;em&gt;file&lt;/em&gt; ]的修改时间( &lt;em&gt;3touch&lt;/em&gt;这个文件,如果没有这个文件,则创建这个文件)&lt;/p&gt;
+&lt;h3 id=&#34;cat-concatenate&#34;&gt;cat &lt;em&gt;(concatenate)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-9&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;cat [file]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-9&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;输出 [ &lt;em&gt;file&lt;/em&gt; ]&lt;/p&gt;
+&lt;h3 id=&#34;mkdir-make-directory&#34;&gt;mkdir &lt;em&gt;(make directory)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-10&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;mkdir [directory]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-10&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;创建 [ &lt;em&gt;directory&lt;/em&gt; ]&lt;/p&gt;
+&lt;h3 id=&#34;rmdir-remove-directory&#34;&gt;rmdir &lt;em&gt;(remove directory)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-11&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;rmdir [directory]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-11&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;删除 [ &lt;em&gt;directory&lt;/em&gt; ] ( &lt;em&gt;如果目录不为空,则删除失败&lt;/em&gt; )&lt;/p&gt;
+&lt;h4 id=&#34;常用选项-1&#34;&gt;常用选项
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;rmdir [directory] -r&lt;/code&gt;( &lt;em&gt;recursive&lt;/em&gt; )&lt;br&gt;
+递归删除 [ &lt;em&gt;directory&lt;/em&gt; ] 及其子目录及文件&lt;/p&gt;
+&lt;h3 id=&#34;tail-tail&#34;&gt;tail &lt;em&gt;(tail)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-12&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;tail [file]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-12&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;输出 [ &lt;em&gt;file&lt;/em&gt; ] 的最后10行&lt;/p&gt;
+&lt;h4 id=&#34;常用选项-2&#34;&gt;常用选项
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;tail -n [number] [file]&lt;/code&gt;
+输出 [ &lt;em&gt;file&lt;/em&gt; ] 的最后 [ &lt;em&gt;number&lt;/em&gt; ] 行&lt;/p&gt;
+&lt;h2 id=&#34;流&#34;&gt;流
+&lt;/h2&gt;&lt;h3 id=&#34;heading&#34;&gt;&amp;lt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-13&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;[command] &amp;lt; [file]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-13&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;将 [ &lt;em&gt;file&lt;/em&gt; ] 的内容作为 [ &lt;em&gt;command&lt;/em&gt; ] 的输入流&lt;/p&gt;
+&lt;h3 id=&#34;heading-1&#34;&gt;&amp;gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-14&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;[command] &amp;gt; [file]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-14&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;将 [ &lt;em&gt;command&lt;/em&gt; ] 的输出流作为 [ &lt;em&gt;file&lt;/em&gt; ] 的内容&lt;/p&gt;
+&lt;h3 id=&#34;heading-2&#34;&gt;&amp;raquo;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-15&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;[command] &amp;gt;&amp;gt; [file]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-15&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;将 [ &lt;em&gt;command&lt;/em&gt; ] 的输出流作为 [ &lt;em&gt;file&lt;/em&gt; ] 的内容,并追加内容&lt;/p&gt;
+&lt;h3 id=&#34;管道-将左边的内容流向右边-&#34;&gt;管道( &lt;em&gt;将左边的内容流向右边&lt;/em&gt; )
+&lt;/h3&gt;&lt;h4 id=&#34;语法-16&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;[source] | [destination]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-16&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;将 [ &lt;em&gt;source&lt;/em&gt; ] 的输出流流向 [ &lt;em&gt;destination&lt;/em&gt; ] 的输入流&lt;/p&gt;
+&lt;h4 id=&#34;实例&#34;&gt;实例
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;ll | tail -n1 &amp;gt; ls.txt&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;tee-tee&#34;&gt;tee &lt;em&gt;(tee)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-17&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;[command] | tee [file]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-17&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;将 [ &lt;em&gt;command&lt;/em&gt; ] 的输出流流向 [ &lt;em&gt;file&lt;/em&gt; ] 的输入流,并输出到屏幕&lt;/p&gt;
+&lt;h4 id=&#34;实例-1&#34;&gt;实例
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;ll | tee ls.txt&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;用户与权限&#34;&gt;用户与权限
+&lt;/h2&gt;&lt;h3 id=&#34;sudo-super-user&#34;&gt;sudo &lt;em&gt;(super user)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-18&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;sudo [command]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-18&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;以管理员身份执行 [ &lt;em&gt;command&lt;/em&gt; ]&lt;/p&gt;
+&lt;h4 id=&#34;常用选项-3&#34;&gt;常用选项
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;sudo -i&lt;/code&gt;( &lt;em&gt;interactive&lt;/em&gt; )&lt;br&gt;
+以管理员身份进入当前用户&lt;/p&gt;
+&lt;h3 id=&#34;chmod-change-mode&#34;&gt;chmod &lt;em&gt;(change mode)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-19&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;chmod [permission] [file]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-19&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;修改 [ &lt;em&gt;file&lt;/em&gt; ] 的权限&lt;/p&gt;
+&lt;h4 id=&#34;实例-2&#34;&gt;实例
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;chmod 751 [file]&lt;/code&gt; ( ( &lt;em&gt;change every single decNum to biNum&lt;/em&gt; ) 修改权限为 rw-r-x&amp;ndash;x )&lt;br&gt;
+&lt;code&gt;chmod u+x [file]&lt;/code&gt; ( 为 &lt;em&gt;user&lt;/em&gt; 添加执行权限 )&lt;br&gt;
+&lt;code&gt;chmod o-w [file]&lt;/code&gt; ( 为 &lt;em&gt;other&lt;/em&gt; 移除写入权限 )&lt;/p&gt;
+&lt;h3 id=&#34;chown-change-owner&#34;&gt;chown &lt;em&gt;(change owner)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-20&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;chown [owner]:[group] [file]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-20&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;修改 [ &lt;em&gt;file&lt;/em&gt; ] 的拥有者为 [ &lt;em&gt;owner&lt;/em&gt; ]&lt;/p&gt;
+&lt;h4 id=&#34;实例-3&#34;&gt;实例
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;chown linlu2cath:exampleGroup exampleFile.txt&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;exit-exit&#34;&gt;exit &lt;em&gt;(exit)&lt;/em&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;语法-21&#34;&gt;语法
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;exit&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;作用-21&#34;&gt;作用
+&lt;/h4&gt;&lt;p&gt;退出当前用户&lt;/p&gt;
 </description>
         </item>
         

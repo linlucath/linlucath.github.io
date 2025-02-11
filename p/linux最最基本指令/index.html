@@ -260,16 +260,161 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#cd-change-directory">cd (change directory)</a>
+    <li><a href="#遨游于文件系统">遨游于文件系统</a>
       <ol>
-        <li><a href="#语法">语法</a></li>
-        <li><a href="#作用">作用</a></li>
+        <li><a href="#pwd-print-working-directory">pwd <em>(print working directory)</em></a>
+          <ol>
+            <li><a href="#语法">语法</a></li>
+            <li><a href="#作用">作用</a></li>
+          </ol>
+        </li>
+        <li><a href="#cd-change-directory">cd <em>(change directory)</em></a>
+          <ol>
+            <li><a href="#语法-1">语法</a></li>
+            <li><a href="#作用-1">作用</a></li>
+          </ol>
+        </li>
+        <li><a href="#ls-list">ls <em>(list)</em></a>
+          <ol>
+            <li><a href="#语法-2">语法</a></li>
+            <li><a href="#作用-2">作用</a></li>
+            <li><a href="#常用选项">常用选项</a></li>
+          </ol>
+        </li>
+        <li><a href="#clear-clear">clear <em>(clear)</em></a>
+          <ol>
+            <li><a href="#语法-3">语法</a></li>
+            <li><a href="#作用-3">作用</a></li>
+            <li><a href="#快捷方式">快捷方式</a></li>
+          </ol>
+        </li>
+        <li><a href="#xdg-open-x-desktop-group-open">xdg-open <em>(x desktop group open)</em></a>
+          <ol>
+            <li><a href="#语法-4">语法</a></li>
+            <li><a href="#作用-4">作用</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
-    <li><a href="#ls-list">ls (list)</a>
+    <li><a href="#将文件玩弄于股掌之中">将文件玩弄于股掌之中</a>
       <ol>
-        <li><a href="#语法-1">语法</a></li>
-        <li><a href="#作用-1">作用</a></li>
+        <li><a href="#cp-copy">cp <em>(copy)</em></a>
+          <ol>
+            <li><a href="#语法-5">语法</a></li>
+            <li><a href="#作用-5">作用</a></li>
+          </ol>
+        </li>
+        <li><a href="#mv-move">mv <em>(move)</em></a>
+          <ol>
+            <li><a href="#语法-6">语法</a></li>
+            <li><a href="#作用-6">作用</a></li>
+          </ol>
+        </li>
+        <li><a href="#rm-remove">rm <em>(remove)</em></a>
+          <ol>
+            <li><a href="#语法-7">语法</a></li>
+            <li><a href="#作用-7">作用</a></li>
+          </ol>
+        </li>
+        <li><a href="#touch-touch">touch <em>(touch)</em></a>
+          <ol>
+            <li><a href="#语法-8">语法</a></li>
+            <li><a href="#作用-8">作用</a></li>
+          </ol>
+        </li>
+        <li><a href="#cat-concatenate">cat <em>(concatenate)</em></a>
+          <ol>
+            <li><a href="#语法-9">语法</a></li>
+            <li><a href="#作用-9">作用</a></li>
+          </ol>
+        </li>
+        <li><a href="#mkdir-make-directory">mkdir <em>(make directory)</em></a>
+          <ol>
+            <li><a href="#语法-10">语法</a></li>
+            <li><a href="#作用-10">作用</a></li>
+          </ol>
+        </li>
+        <li><a href="#rmdir-remove-directory">rmdir <em>(remove directory)</em></a>
+          <ol>
+            <li><a href="#语法-11">语法</a></li>
+            <li><a href="#作用-11">作用</a></li>
+            <li><a href="#常用选项-1">常用选项</a></li>
+          </ol>
+        </li>
+        <li><a href="#tail-tail">tail <em>(tail)</em></a>
+          <ol>
+            <li><a href="#语法-12">语法</a></li>
+            <li><a href="#作用-12">作用</a></li>
+            <li><a href="#常用选项-2">常用选项</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#流">流</a>
+      <ol>
+        <li><a href="#heading">&lt;</a>
+          <ol>
+            <li><a href="#语法-13">语法</a></li>
+            <li><a href="#作用-13">作用</a></li>
+          </ol>
+        </li>
+        <li><a href="#heading-1">&gt;</a>
+          <ol>
+            <li><a href="#语法-14">语法</a></li>
+            <li><a href="#作用-14">作用</a></li>
+          </ol>
+        </li>
+        <li><a href="#heading-2">&raquo;</a>
+          <ol>
+            <li><a href="#语法-15">语法</a></li>
+            <li><a href="#作用-15">作用</a></li>
+          </ol>
+        </li>
+        <li><a href="#管道-将左边的内容流向右边-">管道( <em>将左边的内容流向右边</em> )</a>
+          <ol>
+            <li><a href="#语法-16">语法</a></li>
+            <li><a href="#作用-16">作用</a></li>
+            <li><a href="#实例">实例</a></li>
+          </ol>
+        </li>
+        <li><a href="#tee-tee">tee <em>(tee)</em></a>
+          <ol>
+            <li><a href="#语法-17">语法</a></li>
+            <li><a href="#作用-17">作用</a></li>
+            <li><a href="#实例-1">实例</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#用户与权限">用户与权限</a>
+      <ol>
+        <li><a href="#sudo-super-user">sudo <em>(super user)</em></a>
+          <ol>
+            <li><a href="#语法-18">语法</a></li>
+            <li><a href="#作用-18">作用</a></li>
+            <li><a href="#常用选项-3">常用选项</a></li>
+          </ol>
+        </li>
+        <li><a href="#chmod-change-mode">chmod <em>(change mode)</em></a>
+          <ol>
+            <li><a href="#语法-19">语法</a></li>
+            <li><a href="#作用-19">作用</a></li>
+            <li><a href="#实例-2">实例</a></li>
+          </ol>
+        </li>
+        <li><a href="#chown-change-owner">chown <em>(change owner)</em></a>
+          <ol>
+            <li><a href="#语法-20">语法</a></li>
+            <li><a href="#作用-20">作用</a></li>
+            <li><a href="#实例-3">实例</a></li>
+          </ol>
+        </li>
+        <li><a href="#exit-exit">exit <em>(exit)</em></a>
+          <ol>
+            <li><a href="#语法-21">语法</a></li>
+            <li><a href="#作用-21">作用</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -356,7 +501,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 2 分钟
                 </time>
             </div>
         
@@ -372,18 +517,164 @@
     
     
     <h1 id="linux最最基本指令及由来">linux最最基本指令及由来
-</h1><h2 id="cd-change-directory">cd (change directory)
-</h2><h3 id="语法">语法
-</h3><p><code>cd [directory]</code>
-例如 <code>cd ./home/linlu2cath/Documents</code></p>
-<h3 id="作用">作用
-</h3><p>切换目录至 [directory]</p>
-<h2 id="ls-list">ls (list)
-</h2><h3 id="语法-1">语法
-</h3><p><code>ls [directory]</code> or <code>ls</code><br>
-例如 <code>ls ./home/linlu2cath/Documents</code> 或 <code>ls</code>(列出当前目录下所有文件)</p>
-<h3 id="作用-1">作用
-</h3><p>列出 [directory] 下所有文件</p>
+</h1><h2 id="遨游于文件系统">遨游于文件系统
+</h2><h3 id="pwd-print-working-directory">pwd <em>(print working directory)</em>
+</h3><h4 id="语法">语法
+</h4><p><code>pwd</code></p>
+<h4 id="作用">作用
+</h4><p>输出当前工作目录</p>
+<h3 id="cd-change-directory">cd <em>(change directory)</em>
+</h3><h4 id="语法-1">语法
+</h4><p><code>cd [target path]</code><br>
+例如</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd ./home/linlu2cath/Documents
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="作用-1">作用
+</h4><p>切换目录至 [ <em>target path</em> ]</p>
+<h3 id="ls-list">ls <em>(list)</em>
+</h3><h4 id="语法-2">语法
+</h4><p><code>ls [directory]</code> or <code>ls</code> (对象为当前目录)<br>
+例如</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ls ./home/linlu2cath/Documents
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="作用-2">作用
+</h4><p>列出 [ <em>directory</em> ] 下所有文件</p>
+<h4 id="常用选项">常用选项
+</h4><p><code>ls -l</code>( <em>long</em> )<br>
+列出 [ <em>directory</em> ] 下所有文件及文件属性 <br>
+<code>ls -a</code>( <em>all</em> )<br>
+列出 [ <em>directory</em> ] 下所有文件及隐藏文件</p>
+<h3 id="clear-clear">clear <em>(clear)</em>
+</h3><h4 id="语法-3">语法
+</h4><p><code>clear</code></p>
+<h4 id="作用-3">作用
+</h4><p>清除屏幕</p>
+<h4 id="快捷方式">快捷方式
+</h4><p><code>ctrl+l</code></p>
+<h3 id="xdg-open-x-desktop-group-open">xdg-open <em>(x desktop group open)</em>
+</h3><h4 id="语法-4">语法
+</h4><p><code>xdg-open [file]</code></p>
+<h4 id="作用-4">作用
+</h4><p>打开 [ <em>file</em> ] ( <em>以适当的软件打开</em> )</p>
+<h2 id="将文件玩弄于股掌之中">将文件玩弄于股掌之中
+</h2><h3 id="cp-copy">cp <em>(copy)</em>
+</h3><h4 id="语法-5">语法
+</h4><p><code>cp [source] [destination]</code></p>
+<h4 id="作用-5">作用
+</h4><p>将 [ <em>source</em> ] 复制至 [ <em>destination</em> ]</p>
+<h3 id="mv-move">mv <em>(move)</em>
+</h3><h4 id="语法-6">语法
+</h4><p><code>mv [source] [destination]</code></p>
+<h4 id="作用-6">作用
+</h4><p>将 [ <em>source</em> ] 移动至 [ <em>destination</em> ]</p>
+<h3 id="rm-remove">rm <em>(remove)</em>
+</h3><h4 id="语法-7">语法
+</h4><p><code>rm [file]</code></p>
+<h4 id="作用-7">作用
+</h4><p>删除 [ <em>file</em> ]</p>
+<h3 id="touch-touch">touch <em>(touch)</em>
+</h3><h4 id="语法-8">语法
+</h4><p><code>touch [file]</code></p>
+<h4 id="作用-8">作用
+</h4><p>创建 [ <em>file</em> ]或更新 [ <em>file</em> ]的修改时间( <em>3touch</em>这个文件,如果没有这个文件,则创建这个文件)</p>
+<h3 id="cat-concatenate">cat <em>(concatenate)</em>
+</h3><h4 id="语法-9">语法
+</h4><p><code>cat [file]</code></p>
+<h4 id="作用-9">作用
+</h4><p>输出 [ <em>file</em> ]</p>
+<h3 id="mkdir-make-directory">mkdir <em>(make directory)</em>
+</h3><h4 id="语法-10">语法
+</h4><p><code>mkdir [directory]</code></p>
+<h4 id="作用-10">作用
+</h4><p>创建 [ <em>directory</em> ]</p>
+<h3 id="rmdir-remove-directory">rmdir <em>(remove directory)</em>
+</h3><h4 id="语法-11">语法
+</h4><p><code>rmdir [directory]</code></p>
+<h4 id="作用-11">作用
+</h4><p>删除 [ <em>directory</em> ] ( <em>如果目录不为空,则删除失败</em> )</p>
+<h4 id="常用选项-1">常用选项
+</h4><p><code>rmdir [directory] -r</code>( <em>recursive</em> )<br>
+递归删除 [ <em>directory</em> ] 及其子目录及文件</p>
+<h3 id="tail-tail">tail <em>(tail)</em>
+</h3><h4 id="语法-12">语法
+</h4><p><code>tail [file]</code></p>
+<h4 id="作用-12">作用
+</h4><p>输出 [ <em>file</em> ] 的最后10行</p>
+<h4 id="常用选项-2">常用选项
+</h4><p><code>tail -n [number] [file]</code>
+输出 [ <em>file</em> ] 的最后 [ <em>number</em> ] 行</p>
+<h2 id="流">流
+</h2><h3 id="heading">&lt;
+</h3><h4 id="语法-13">语法
+</h4><p><code>[command] &lt; [file]</code></p>
+<h4 id="作用-13">作用
+</h4><p>将 [ <em>file</em> ] 的内容作为 [ <em>command</em> ] 的输入流</p>
+<h3 id="heading-1">&gt;
+</h3><h4 id="语法-14">语法
+</h4><p><code>[command] &gt; [file]</code></p>
+<h4 id="作用-14">作用
+</h4><p>将 [ <em>command</em> ] 的输出流作为 [ <em>file</em> ] 的内容</p>
+<h3 id="heading-2">&raquo;
+</h3><h4 id="语法-15">语法
+</h4><p><code>[command] &gt;&gt; [file]</code></p>
+<h4 id="作用-15">作用
+</h4><p>将 [ <em>command</em> ] 的输出流作为 [ <em>file</em> ] 的内容,并追加内容</p>
+<h3 id="管道-将左边的内容流向右边-">管道( <em>将左边的内容流向右边</em> )
+</h3><h4 id="语法-16">语法
+</h4><p><code>[source] | [destination]</code></p>
+<h4 id="作用-16">作用
+</h4><p>将 [ <em>source</em> ] 的输出流流向 [ <em>destination</em> ] 的输入流</p>
+<h4 id="实例">实例
+</h4><p><code>ll | tail -n1 &gt; ls.txt</code></p>
+<h3 id="tee-tee">tee <em>(tee)</em>
+</h3><h4 id="语法-17">语法
+</h4><p><code>[command] | tee [file]</code></p>
+<h4 id="作用-17">作用
+</h4><p>将 [ <em>command</em> ] 的输出流流向 [ <em>file</em> ] 的输入流,并输出到屏幕</p>
+<h4 id="实例-1">实例
+</h4><p><code>ll | tee ls.txt</code></p>
+<h2 id="用户与权限">用户与权限
+</h2><h3 id="sudo-super-user">sudo <em>(super user)</em>
+</h3><h4 id="语法-18">语法
+</h4><p><code>sudo [command]</code></p>
+<h4 id="作用-18">作用
+</h4><p>以管理员身份执行 [ <em>command</em> ]</p>
+<h4 id="常用选项-3">常用选项
+</h4><p><code>sudo -i</code>( <em>interactive</em> )<br>
+以管理员身份进入当前用户</p>
+<h3 id="chmod-change-mode">chmod <em>(change mode)</em>
+</h3><h4 id="语法-19">语法
+</h4><p><code>chmod [permission] [file]</code></p>
+<h4 id="作用-19">作用
+</h4><p>修改 [ <em>file</em> ] 的权限</p>
+<h4 id="实例-2">实例
+</h4><p><code>chmod 751 [file]</code> ( ( <em>change every single decNum to biNum</em> ) 修改权限为 rw-r-x&ndash;x )<br>
+<code>chmod u+x [file]</code> ( 为 <em>user</em> 添加执行权限 )<br>
+<code>chmod o-w [file]</code> ( 为 <em>other</em> 移除写入权限 )</p>
+<h3 id="chown-change-owner">chown <em>(change owner)</em>
+</h3><h4 id="语法-20">语法
+</h4><p><code>chown [owner]:[group] [file]</code></p>
+<h4 id="作用-20">作用
+</h4><p>修改 [ <em>file</em> ] 的拥有者为 [ <em>owner</em> ]</p>
+<h4 id="实例-3">实例
+</h4><p><code>chown linlu2cath:exampleGroup exampleFile.txt</code></p>
+<h3 id="exit-exit">exit <em>(exit)</em>
+</h3><h4 id="语法-21">语法
+</h4><p><code>exit</code></p>
+<h4 id="作用-21">作用
+</h4><p>退出当前用户</p>
 
 </section>
 
