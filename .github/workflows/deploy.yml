@@ -9,15 +9,10 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  deployments: write # 新增必要权限
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./ # 显式指定工作目录
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -34,12 +29,21 @@ jobs:
       - name: Build project
         run: |
           npm run build
-          echo "BASE_URL=${{ github.repository == 'linlucath/linlucath.github.io' && '/' || '/repository-name/' }}" >> $GITHUB_ENV
+          echo "BASE_URL=/" >> $GITHUB_ENV  # 强制设置根路径
 
-      - name: Upload production artifacts
+      - name: Move build output
+        run: |
+          # 创建 GitHub Pages 需要的标准结构
+          mkdir -p deploy
+          cp -r dist/client/* deploy/
+          cp dist/client/sitemap*.xml deploy/ 2>/dev/null || true
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist # 确保与 Astro 构建目录匹配
+          name: gh-pages
+          path: deploy/ # 上传调整后的目录
+          retention-days: 1
 
   deploy:
     needs: build
@@ -53,4 +57,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: 'pages-artifact' # 显式指定 artifact 名称
+          artifact: gh-pages

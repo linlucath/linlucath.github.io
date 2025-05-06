@@ -33,9 +33,12 @@ export default defineConfig({
   // base: '/docs',
 
   site: 'https://linlucath.github.io',
-  base: 'my-repo',
-
-  trailingSlash: 'never',
+  outDir: './dist/client', // 显式指定输出目录
+  build: {
+    format: 'directory',
+    inlineStylesheets: 'auto'
+  },
+  trailingSlash: 'always',
 
   // Adapter
   // https://docs.astro.build/en/guides/deploy/
