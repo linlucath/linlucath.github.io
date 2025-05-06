@@ -29,11 +29,11 @@ import config from './src/site.config.ts'
 // https://astro.build/config
 export default defineConfig({
   // Top-Level Options
-  site: 'https://astro-pure.js.org',
+  // site: 'https://astro-pure.js.org',
   // base: '/docs',
 
-  // site: 'https://linlucath.github.io',
-  // base: 'my-repo',
+  site: 'https://linlucath.github.io',
+  base: 'my-repo',
 
   trailingSlash: 'never',
 
