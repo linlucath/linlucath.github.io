@@ -182,8 +182,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
             )
           }
         </Card>
+      </Section>
 
-        <!-- <Section title='Website List'>
+      <!-- <Section title='Website List'>
         <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
           <ProjectCard
             href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
@@ -212,7 +213,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         </div>
       </Section> -->
 
-        <!-- <Section title='Certifications'>
+      <!-- <Section title='Certifications'>
         <Card
           as='a'
           heading='CET-4 619'
@@ -222,14 +223,13 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         />
       </Section> -->
 
-        <Section title='Skills'>
-          <SkillLayout title='Languages' skills={languages} />
-          <!-- <SkillLayout title='Frontend' skills={frontend} />
+      <Section title='Skills'>
+        <SkillLayout title='Languages' skills={languages} />
+        <!-- <SkillLayout title='Frontend' skills={frontend} />
           <SkillLayout title='Backend' skills={backend} /> -->
-          <SkillLayout title='Tools' skills={['Git', 'Markdown', 'LaTeX', 'Vim']} />
-        </Section>
+        <SkillLayout title='Tools' skills={['Git', 'Markdown', 'LaTeX', 'Vim']} />
       </Section>
-      <!-- <Quote class='mt-12' /> -->
     </div>
+    <!-- <Quote class='mt-12' /> -->
   </main>
 </PageLayout>
