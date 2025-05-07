@@ -1,20 +1,20 @@
 ---
 import { Image } from 'astro:assets'
 
-import { Quote } from 'astro-pure/advanced'
+// import { Quote } from 'astro-pure/advanced'
 import { PostPreview } from 'astro-pure/components/pages'
 import { getBlogCollection, sortMDByDate } from 'astro-pure/server'
 import { Button, Card, Icon, Label } from 'astro-pure/user'
 import PageLayout from '@/layouts/BaseLayout.astro'
-import ProjectCard from '@/components/home/ProjectCard.astro'
+// import ProjectCard from '@/components/home/ProjectCard.astro'
 import Section from '@/components/home/Section.astro'
 import SkillLayout from '@/components/home/SkillLayout.astro'
 import avatar from '@/assets/avatar.png'
 import config from '@/site-config'
 
 const languages = ['Html', 'JavaScript', 'CSS', 'Shell', 'Python', 'Java', 'C++', 'RISC-V']
-const frontend = ['TypeScript', 'Vite', 'Webpack', 'Astro']
-const backend = ['Vercel', 'Waline']
+// const frontend = ['TypeScript', 'Vite', 'Webpack', 'Astro']
+// const backend = ['Vercel', 'Waline']
 
 const MAX_POSTS = 10
 const allPosts = await getBlogCollection()
@@ -122,7 +122,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
           as='a'
           heading='Missing Semester'
           subheading='Working on Shell'
-          date='Jan 2025 - Feb 2025'
+          date='Jan. 2025 - Feb. 2025'
           href='https://missing.csail.mit.edu/2020/'
         >
           {
@@ -138,7 +138,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
           as='a'
           heading='CS61A'
           subheading='Programming Languages'
-          date='Jan 2025 - Mar 2025'
+          date='Jan. 2025 - Mar. 2025'
           href='https://cs61a.org/'
         >
           {
@@ -154,7 +154,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
           as='a'
           heading='CS61B'
           subheading='Data Structures / Software Engineering'
-          date='Jan 2025 - Mar 2025'
+          date='Mar. 2025 - Apr. 2025'
           href='https://sp21.datastructur.es/'
         >
           {
@@ -166,9 +166,24 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
             )
           }
         </Card>
-      </Section>
+        <Card
+          as='a'
+          heading='CS61C'
+          subheading='Computer Architecture'
+          date='May. 2025 - Jun. 2025'
+          href='https://cs61c.org/'
+        >
+          {
+            (
+              <ul class='ms-4 list-disc text-muted-foreground'>
+                <li>Gained a deep understanding of computer architecture and assembly language.</li>
+                <li>Designed and implemented a RISC-V CPU from scratch.</li>
+              </ul>
+            )
+          }
+        </Card>
 
-      <!-- <Section title='Website List'>
+        <!-- <Section title='Website List'>
         <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
           <ProjectCard
             href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
@@ -197,7 +212,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         </div>
       </Section> -->
 
-      <!-- <Section title='Certifications'>
+        <!-- <Section title='Certifications'>
         <Card
           as='a'
           heading='CET-4 619'
@@ -207,12 +222,14 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         />
       </Section> -->
 
-      <Section title='Skills'>
-        <SkillLayout title='Languages' skills={languages} />
-        <SkillLayout title='Frontend' skills={frontend} />
-        <SkillLayout title='Backend' skills={backend} />
+        <Section title='Skills'>
+          <SkillLayout title='Languages' skills={languages} />
+          <!-- <SkillLayout title='Frontend' skills={frontend} />
+          <SkillLayout title='Backend' skills={backend} /> -->
+          <SkillLayout title='Tools' skills={['Git', 'Markdown', 'LaTeX', 'Vim']} />
+        </Section>
       </Section>
+      <!-- <Quote class='mt-12' /> -->
     </div>
-    <!-- <Quote class='mt-12' /> -->
   </main>
 </PageLayout>
