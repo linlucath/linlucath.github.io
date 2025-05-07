@@ -12,7 +12,7 @@ language: '中文'
 
 ---
 
-## _*定义:*_
+## _*定义 / 概念:*_
 
 ### 偏导数
 
@@ -90,3 +90,25 @@ $$
   其中 $(\operatorname{grad} f, \boldsymbol{v})$ 表示 $\operatorname{grad} f(x_0, y_0)$ 与 $\boldsymbol{v}$ 的夹角.
 
 > "Gradient" 被译作 "梯度", 但其本义为行走, 在这里描述函数值上升最快的行走方式, **是一个向量**, 私以为翻译为"梯度"不太妥当
+
+### 向量值函数的导数
+
+$f:\mathbb{R}^n \to \mathbb{R}^m$
+
+- 若 $f$ 的每一个分量函数 $f_i(x_1, x_2, \cdots, x_n)$ $(i = 1, 2, \cdots, m)$ 都在 $\boldsymbol{x}$ 点可偏导，就称向量值函数 $f$ 在 $\boldsymbol{x}$ 点可导，并称矩阵
+
+  $$
+  \left( \frac{\partial f_i}{\partial x_j} \bigg|_{\boldsymbol{x}} \right)_{m \times n} =
+  \begin{pmatrix}
+  \frac{\partial f_1}{\partial x_1} \bigg|_{\boldsymbol{x}} & \frac{\partial f_1}{\partial x_2} \bigg|_{\boldsymbol{x}} & \cdots & \frac{\partial f_1}{\partial x_n} \bigg|_{\boldsymbol{x}} \\
+  \frac{\partial f_2}{\partial x_1} \bigg|_{\boldsymbol{x}} & \frac{\partial f_2}{\partial x_2} \bigg|_{\boldsymbol{x}} & \cdots & \frac{\partial f_2}{\partial x_n} \bigg|_{\boldsymbol{x}} \\
+  \vdots & \vdots & \ddots & \vdots \\
+  \frac{\partial f_m}{\partial x_1} \bigg|_{\boldsymbol{x}} & \frac{\partial f_m}{\partial x_2} \bigg|_{\boldsymbol{x}} & \cdots & \frac{\partial f_m}{\partial x_n} \bigg|_{\boldsymbol{x}}
+  \end{pmatrix}
+  $$
+
+  为向量值函数 $f$ 在 $\boldsymbol{x}$ 点的导数或 Jacobi 矩阵，记为 $f'(\boldsymbol{x})$ (或 $Df(\boldsymbol{x}), J_f(\boldsymbol{x})$)。
+
+> 感到这个定义莫名其妙, 难以理解? 听听 [3Blue1Brown 的讲解](https://www.bilibili.com/video/BV1NJ411r7ja/) 吧
+
+## _*性质 / 定理:*_
