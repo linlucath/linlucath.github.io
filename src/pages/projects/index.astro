@@ -2,34 +2,35 @@
 import { Image } from 'astro:assets'
 
 import type { iconsType } from 'astro-pure/types'
-import { Button, Collapse, Icon } from 'astro-pure/user'
+// import { Button, Collapse, Icon } from 'astro-pure/user'
+import { Button, Icon } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
 import ProjectSection from '@/components/projects/ProjectSection.astro'
-import Sponsors from '@/components/projects/Sponsors.astro'
+// import Sponsors from '@/components/projects/Sponsors.astro'
 import alipay from '@/assets/alipay-qrcode.jpg'
 // import KeyIcon from '@/assets/icons/key.svg'
 import wechat from '@/assets/wechat-qrcode.jpg'
 import config from '@/site-config'
 
 const headings = [
-  { depth: 2, slug: 'theme', text: 'Theme' },
-  { depth: 2, slug: 'programs', text: 'Programs' },
+  // { depth: 2, slug: 'theme', text: 'Theme' },
+  // { depth: 2, slug: 'programs', text: 'Programs' },
   { depth: 2, slug: 'learnings', text: 'Learnings' },
-  { depth: 2, slug: 'others', text: 'Others' },
-  { depth: 2, slug: 'gpg-signature', text: 'GPG Signature' },
+  // { depth: 2, slug: 'others', text: 'Others' },
+  // { depth: 2, slug: 'gpg-signature', text: 'GPG Signature' },
   { depth: 2, slug: 'sponsorship', text: 'Sponsorship' }
 ]
 ---
 
 <PageLayout title='Projects' {headings} info={{ slug: '/projects', hideComment: true }}>
-  <p>
+  <!-- <p>
     If you think it would be useful or interesting to collaborate on a project, you can donate to
     support my work or contact me to discuss a project.
   </p>
   <Button title='Checkout sponsorship' class='w-fit' href='#sponsorship'>
     <Icon class='size-5' name='receive-money' slot='before' />
-  </Button>
-
+  </Button> -->
+  <!-- 
   <h2 id='theme'>Theme</h2>
   <ProjectSection
     project={[
@@ -46,9 +47,9 @@ const headings = [
         ]
       }
     ]}
-  />
+  /> -->
 
-  <h2 id='programs'>Programs</h2>
+  <!-- <h2 id='programs'>Programs</h2>
   <ProjectSection
     project={[
       {
@@ -73,8 +74,8 @@ const headings = [
         ]
       }
     ]}
-  />
-  <Collapse title='Some old projects'>
+  /> -->
+  <!-- <Collapse title='Some old projects'>
     <ProjectSection
       project={[
         {
@@ -92,9 +93,9 @@ const headings = [
         }
       ]}
     />
-  </Collapse>
+  </Collapse> -->
 
-  <h2 id='learnings'>Learnings</h2>
+  <!-- <h2 id='learnings'>Learnings</h2>
   <ProjectSection
     class='my-2'
     project={[
@@ -114,9 +115,9 @@ const headings = [
         ]
       }
     ]}
-  />
+  /> -->
 
-  <h2 id='others'>Others</h2>
+  <!-- <h2 id='others'>Others</h2>
   <ProjectSection
     project={[
       {
@@ -130,7 +131,7 @@ const headings = [
         links: [{ type: 'github', href: 'https://github.com/zhuozhiyongde' }]
       }
     ]}
-  />
+  /> -->
 
   <!-- gpg signature
   <h2 id='gpg-signature'>GPG Signature</h2>
@@ -176,8 +177,8 @@ const headings = [
       ))
     }
   </div>
-  <p>Thanks to the following sponsors:</p>
-  <Sponsors sponsors={[]} />
+  <!-- <p>Thanks to the following sponsors:</p>
+  <Sponsors sponsors={[]} /> -->
 </PageLayout>
 
 <script

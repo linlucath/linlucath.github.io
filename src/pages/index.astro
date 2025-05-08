@@ -12,6 +12,7 @@ import SkillLayout from '@/components/home/SkillLayout.astro'
 import avatar from '@/assets/avatar.png'
 import config from '@/site-config'
 
+const tools = ['Vim', 'Git', 'Linux', 'Markdown', 'Latex']
 const languages = ['Html', 'JavaScript', 'CSS', 'Shell', 'Python', 'Java', 'C++', 'RISC-V']
 // const frontend = ['TypeScript', 'Vite', 'Webpack', 'Astro']
 // const backend = ['Vercel', 'Waline']
@@ -227,7 +228,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         <SkillLayout title='Languages' skills={languages} />
         <!-- <SkillLayout title='Frontend' skills={frontend} />
           <SkillLayout title='Backend' skills={backend} /> -->
-        <SkillLayout title='Tools' skills={['Git', 'Markdown', 'LaTeX', 'Vim']} />
+        <SkillLayout title='Tools' skills={tools} />
       </Section>
     </div>
     <!-- <Quote class='mt-12' /> -->
