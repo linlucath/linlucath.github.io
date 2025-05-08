@@ -112,3 +112,30 @@ $f:\mathbb{R}^n \to \mathbb{R}^m$
 > 感到这个定义莫名其妙, 难以理解? 听听 [3Blue1Brown 的讲解](https://www.bilibili.com/video/BV1NJ411r7ja/) 吧
 
 ## _*性质 / 定理:*_
+
+### 可微的充分必要条件
+
+- 设函数 $z = f(x, y)$ 在 $(x_0, y_0)$ 点的某个邻域上存在偏导数，并且偏导数在 $(x_0, y_0)$ 点连续，那么 $f$ 在 $(x_0, y_0)$ 点可微。
+
+> $$
+> f(x_0 + \Delta x, y_0 + \Delta y) - f(x_0, y_0)
+> \\ = f(x_0 + \Delta x, y_0 + \Delta y) - f(x_0, y_0 + \Delta y) + f(x_0, y_0 + \Delta y) - f(x_0, y_0)
+> \\ = f_x(x_0 + \theta_1 \Delta x, y_0 + \Delta y) \Delta x + f_y(x_0, y_0 + \theta_2 \Delta y) \Delta y, \quad 0 < \theta_1, \theta_2 < 1,
+> $$
+
+### 梯度的性质
+
+- $ \text{grad} (f \cdot g) = g \cdot \text{grad} f + f \cdot \text{grad} g$.
+- $ \text{grad} (\frac{f}{g}) = \frac{g \cdot \text{grad} f - f \cdot \text{grad} g}{g^2}$.
+
+> 有没有觉得和求导法则很像? 想一想梯度是如何计算的
+
+### 高阶偏导数
+
+- 如果函数 $z = f(x, y)$ 的两个混合偏导数 $f_{xy}$ 和 $f_{yx}$ 在点 $(x_0, y_0)$ 连续，那么等式 $f_{xy}(x_0, y_0) = f_{yx}(x_0, y_0)$ 成立。
+
+> 在 Geogebra 中绘制 $f(x,y)=\frac{xy(x^2-y^2)}{x^2+y^2}$ 的图像, 观察一下这个结论的几何意义是什么?
+
+```geogebra title="Geogebra"
+f(x,y)=((x*y (x^(2)-y^(2)))/(x^(2)+y^(2))) // [!code highlight]
+```
