@@ -98,18 +98,27 @@ $f:\mathbb{R}^n \to \mathbb{R}^m$
 - 若 $f$ 的每一个分量函数 $f_i(x_1, x_2, \cdots, x_n)$ $(i = 1, 2, \cdots, m)$ 都在 $\boldsymbol{x}$ 点可偏导，就称向量值函数 $f$ 在 $\boldsymbol{x}$ 点可导，并称矩阵
 
   $$
-  \left( \frac{\partial f_i}{\partial x_j} \bigg|_{\boldsymbol{x}} \right)_{m \times n} =
+   \left( \frac{\partial f_i}{\partial x_j} \bigg|_{\boldsymbol{x}} \right)_{m \times n}
+  =
+  \begin{pmatrix}
+  \frac{\partial f}{\partial x_1} \bigg|_{\boldsymbol{x}} & \frac{\partial f}{\partial x_2} \bigg|_{\boldsymbol{x}} & \cdots & \frac{\partial f}{\partial x_n} \bigg|_{\boldsymbol{x}}
+  \end{pmatrix} \\
+  =
   \begin{pmatrix}
   \frac{\partial f_1}{\partial x_1} \bigg|_{\boldsymbol{x}} & \frac{\partial f_1}{\partial x_2} \bigg|_{\boldsymbol{x}} & \cdots & \frac{\partial f_1}{\partial x_n} \bigg|_{\boldsymbol{x}} \\
   \frac{\partial f_2}{\partial x_1} \bigg|_{\boldsymbol{x}} & \frac{\partial f_2}{\partial x_2} \bigg|_{\boldsymbol{x}} & \cdots & \frac{\partial f_2}{\partial x_n} \bigg|_{\boldsymbol{x}} \\
   \vdots & \vdots & \ddots & \vdots \\
   \frac{\partial f_m}{\partial x_1} \bigg|_{\boldsymbol{x}} & \frac{\partial f_m}{\partial x_2} \bigg|_{\boldsymbol{x}} & \cdots & \frac{\partial f_m}{\partial x_n} \bigg|_{\boldsymbol{x}}
   \end{pmatrix}
+
+
   $$
 
   为向量值函数 $f$ 在 $\boldsymbol{x}$ 点的导数或 Jacobi 矩阵，记为 $f'(\boldsymbol{x})$ (或 $Df(\boldsymbol{x}), J_f(\boldsymbol{x})$)。
 
 > 感到这个定义莫名其妙, 难以理解? 听听 [3Blue1Brown 的讲解](https://www.bilibili.com/video/BV1NJ411r7ja/) 吧
+
+> 导数不是数, 梯度不是度
 
 ## _*性质 / 定理:*_
 
@@ -139,3 +148,20 @@ $f:\mathbb{R}^n \to \mathbb{R}^m$
 ```geogebra title="Geogebra"
 f(x,y)=((x*y (x^(2)-y^(2)))/(x^(2)+y^(2))) // [!code highlight]
 ```
+
+### 高阶全微分
+
+- $$
+   d^k z = (dx \frac{\partial}{\partial x} + dy \frac{\partial}{\partial y})^k \cdot z
+  $$
+
+> 自己推导一下呢
+
+### 向量值函数的导数
+
+- 向量值函数 $f$ 在 $\mathbf{x}^0$ 点可微的充分必要条件是它的坐标分量函数 $f_i(x_1, x_2, \cdots, x_n)$ $(i = 1, 2, \cdots, m)$ 都在 $\mathbf{x}^0$ 点可微. 此时成立微分公式
+  $$
+  \text{d}\mathbf{y} = f'(\mathbf{x}^0) \text{d}\mathbf{x}.
+  $$
+
+## 习题
