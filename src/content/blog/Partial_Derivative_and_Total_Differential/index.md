@@ -1,9 +1,12 @@
 ---
-title: 多元函数微分学
+title: 偏导数与全微分
 publishDate: 2025-05-07
 description: '将分析对象扩展至 Euclid 空间'
 tags:
   - Calculus
+  - Math
+  - Partial Derivative
+  - Multivariable
 heroImage: { src: './thumbnail.jpg', color: '#B4C6DA' }
 language: '中文'
 ---
@@ -122,7 +125,7 @@ $f:\mathbb{R}^n \to \mathbb{R}^m$
 
 ## _*性质 / 定理:*_
 
-### 可微的充分必要条件
+### 可微的充分条件
 
 - 设函数 $z = f(x, y)$ 在 $(x_0, y_0)$ 点的某个邻域上存在偏导数，并且偏导数在 $(x_0, y_0)$ 点连续，那么 $f$ 在 $(x_0, y_0)$ 点可微。
 
@@ -131,6 +134,12 @@ $f:\mathbb{R}^n \to \mathbb{R}^m$
 > \\ = f(x_0 + \Delta x, y_0 + \Delta y) - f(x_0, y_0 + \Delta y) + f(x_0, y_0 + \Delta y) - f(x_0, y_0)
 > \\ = f_x(x_0 + \theta_1 \Delta x, y_0 + \Delta y) \Delta x + f_y(x_0, y_0 + \theta_2 \Delta y) \Delta y, \quad 0 < \theta_1, \theta_2 < 1,
 > $$
+
+> 偏导数连续是一个很重要的条件, 去掉后甚至不能保证连续, 在 Geogebra 中绘制 $f(x,y)=\frac{xy}{x^2+y^2}$ 的图像, 观察一下这个结论的几何意义是什么?
+
+```geogebra title="Geogebra"
+f(x,y)=((x y)/(x^(2)+y^(2))) // [!code highlight]
+```
 
 ### 梯度的性质
 
@@ -163,5 +172,3 @@ f(x,y)=((x*y (x^(2)-y^(2)))/(x^(2)+y^(2))) // [!code highlight]
   $$
   \text{d}\mathbf{y} = f'(\mathbf{x}^0) \text{d}\mathbf{x}.
   $$
-
-## 习题
