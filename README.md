@@ -4,6 +4,8 @@
 
 A simple, fast and powerful blog website built by Astro.
 
+[Link](https://linlucath.github.io/)
+
 ![image](./.github/assets/Overview.png)
 
 ## Thanks

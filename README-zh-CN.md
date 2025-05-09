@@ -4,6 +4,8 @@
 
 一个简洁的个人博客网站，使用 Astro 构建。
 
+[Link](https://linlucath.github.io/)
+
 ![image](./.github/assets/Overview.png)
 
 ## 致谢
