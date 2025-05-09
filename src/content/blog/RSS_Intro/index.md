@@ -1,10 +1,10 @@
 ---
 title: 'RSS 介绍及使用'
 publishDate: 2025-05-09
-description: '什么是 RSS'
+description: '认识各式各样的大神们'
 tags:
   - RSS
-  - Workflow
+  - News
 heroImage: { src: './thumbnail.jpg', color: '#B4C6DA' }
 language: '中文'
 ---
@@ -17,7 +17,7 @@ RSS 是一种用于订阅网站内容更新的技术。它允许用户通过 RSS
 
 > 简单来说, RSS 是一个追踪网站更新的工具, 当网站更新时, 你可以及时获得提醒
 
-## 我没有网站想要订阅?
+## 不知道订阅什么网站?
 
 在文章最后列举了大量个人博客, 你可以在这些网站上找到你感兴趣的内容, 订阅他们的 RSS Feed
 
@@ -25,12 +25,17 @@ RSS 是一种用于订阅网站内容更新的技术。它允许用户通过 RSS
 
 下面列举了一些作者喜欢的博客
 
+| RSS feed | Introduction | tags |
+| -------- | ------------ | ---- |
+
 ## 如何订阅呢?
 
 - RSS 阅读器: [Feedly](https://feedly.com/)
 - RSS 获取: [RSSHub](https://chromewebstore.google.com/detail/rsshub-radar/kefjpfngnndepjbopdmoebkipbgkggaa)
 
 ---
+
+以下是一些笔主还没有时间阅读的博客, 来源: [Chinese Independent Blogs](https://github.com/timqian/chinese-independent-blogs/tree/master)
 
 | RSS feed                                                                              | Introduction                                                                | tags                                                                                   |
 | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
