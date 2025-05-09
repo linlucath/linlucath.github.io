@@ -392,11 +392,11 @@ $$
 
 $A\in \mathcal{L}(\mathbb{R},\cdots,\mathbb{R};\mathbb{R})$是一个$n$重线性函数
 
-$\exp6.$$\mathbb{R}$上的欧几里得空间中，标量积是一个双线性函数
+$\exp6.$ $\mathbb{R}$上的欧几里得空间中，标量积是一个双线性函数
 
 $\exp7.$三维欧几里得空间$E^3$中，向量的向量积$A\in \mathcal{L}(E^3,E^3,E^3)$
 
-$\exp8.$$\det:M_n(\mathbb{R})\rightarrow \mathbb{R}$是一个$n$重线性函数
+$\exp8.$ $\det:M_n(\mathbb{R})\rightarrow \mathbb{R}$是一个$n$重线性函数
 
 在之后我们会计算它们的范数
 
