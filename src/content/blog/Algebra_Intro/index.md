@@ -26,7 +26,7 @@ $$
 
 可以证明，所有的线性方程组都等价于一个阶梯型方程组
 
-![image-20250330153111571](C:\Users\15159\AppData\Roaming\Typora\typora-user-images\image-20250330153111571.png)
+![image-20250330153111571](./.assets/image-20250330153111571.png)
 
 由定义，每一个方程首个不为零的元素的行数是大于等于列数的
 
@@ -216,7 +216,7 @@ $$
 
 尝试将 $S_n$ 的置换分解为更简单的置换
 
-![image-20250331153734295](C:\Users\15159\AppData\Roaming\Typora\typora-user-images\image-20250331153734295.png)
+![image-20250331153734295](./.assets/image-20250331153734295.png)
 
 仔细观察 $\sigma$ 的结构，可以看出只要置换两次（做乘法），无论如何 总是有 $1\rightarrow3，3\rightarrow1$ 和 $2\rightarrow4,4\rightarrow2$
 
@@ -844,7 +844,7 @@ $$
 
 用更为直观的方式来表示，就是
 
-![image-20250405182638089](./《代数学引论》笔记.assets/image-20250405182638089.png)
+![image-20250405182638089](./.assets/image-20250405182638089.png)
 
 $$
 z_i = a_j^iy^i = a_j^ib_k^jx^k\\
