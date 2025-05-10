@@ -5,7 +5,6 @@ description: '将分析对象扩展至 Euclid 空间'
 tags:
   - Calculus
   - Math
-  - Partial Derivative
   - Multivariable
 heroImage: { src: './thumbnail.jpg', color: '#B4C6DA' }
 language: '中文'
