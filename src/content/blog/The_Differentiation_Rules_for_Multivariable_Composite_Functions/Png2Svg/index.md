@@ -29,4 +29,3 @@ $f:\mathbb{R}^2 \to F \quad g:\mathbb{R}^2 \to \mathbb{R}^2$
   $$
 
 > 平凡的加法原理.
-> http://localhost:4321/blog/the_differentiation_rules_for_multivariable_composite_functions/png2svg#waline
