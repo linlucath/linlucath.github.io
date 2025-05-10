@@ -171,3 +171,25 @@ f(x,y)=((x*y (x^(2)-y^(2)))/(x^(2)+y^(2))) // [!code highlight]
   $$
   \text{d}\mathbf{y} = f'(\mathbf{x}^0) \text{d}\mathbf{x}.
   $$
+
+### 链式法则
+
+$f:\mathbb{R}^2 \to F \quad g:\mathbb{R}^2 \to \mathbb{R}^2$
+
+- 设 $g$ 在 $(u_0, v_0) \in D_g$ 点可导，即 $x=x(u,v)$, $y=y(u,v)$ 在 $
+(u_0,v_0)$ 点可偏导. 记 $x_0=x(u_0,v_0)$, $y_0=y(u_0,v_0)$，如果 $f$ 在 $
+(x_0,y_0)$ 点可微，那么
+  $$
+  \frac{\partial z}{\partial u}(u_0,v_0) = \frac{\partial z}{\partial x}
+  (x_0,y_0) \frac{\partial x}{\partial u}(u_0,v_0) + \frac{\partial z}
+  {\partial y}(x_0,y_0) \frac{\partial y}{\partial u}(u_0,v_0);
+  $$
+  $$
+  \frac{\partial z}{\partial v}(u_0,v_0) = \frac{\partial z}{\partial x}
+  (x_0,y_0) \frac{\partial x}{\partial v}(u_0,v_0) + \frac{\partial z}
+  {\partial y}(x_0,y_0) \frac{\partial y}{\partial v}(u_0,v_0).
+  $$
+
+> 平凡的加法原理.
+
+### 一阶全微分的形式不变性
