@@ -5,6 +5,7 @@ description: '获取 SVG 的各种方法'
 tags:
   - SVG
   - Design
+  - Misc
 heroImage: { src: './thumbnail.jpg', color: '#B4C6DA' }
 language: '中文'
 ---
@@ -36,15 +37,17 @@ SVG 是一种基于 XML 的矢量图形格式，广泛用于网页设计和图�
 
 ## 图片转 SVG
 
-想要将图片转换为 SVG? 试试下面的网站：
+想要将图片转换为 SVG? 试试下面的工作流：
 
-- [Vector Magic](https://vectormagic.com/)
-- [Online Convert](https://image.online-convert.com/convert-to-svg)
-
-> 通过图片获得的 SVG 一般质量不高, 可以通过 [SVG 微调工具](https://jakearchibald.github.io/svgomg/) 进行优化
+1. 使用 [Upscayl](https://upscayl.org/) 提升图片质量
+2. 使用一些免费的工具将图片转换为 SVG, 比如
+   [这个网站](https://onlineconvertfree.com/)
+3. 使用 [SVG 微调工具](https://jakearchibald.github.io/svgomg/)
+   对转化得到 SVG 进行结构优化
+4. 使用 [Inkscape](https://inkscape.org/) 进行一些小修小补
 
 ---
 
 ## Tips
 
-SVG 是一份**_代码_**, 这意味着当你的 SVG 出现了一些问题时, 你可以直接打开 SVG 文件, 查看代码, 询问 AI
+SVG 是一份 **_代码_**, 这意味着当你的 SVG 出现了一些问题时, 你可以直接打开 SVG 文件, 查看代码, 询问 AI

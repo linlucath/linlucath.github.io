@@ -50,6 +50,7 @@ export const theme: ThemeUserConfig = {
       { title: 'Math Note', link: '/tags/math' },
       { title: 'CS Note', link: '/tags/cs' },
       { title: 'Daily', link: '/tags/daily' },
+      { title: 'Misc', link: '/tags/misc' },
       { title: 'About', link: '/about' }
 
       // { title: 'Docs', link: '/docs' },
