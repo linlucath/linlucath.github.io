@@ -1,5 +1,5 @@
 ---
-title: 偏导数与全微分
+title: 多元函数微分学
 publishDate: 2025-05-07
 description: '将分析对象扩展至 Euclid 空间'
 tags:
@@ -137,7 +137,7 @@ $f:\mathbb{R}^n \to \mathbb{R}^m$
 > 偏导数连续是一个很重要的条件, 去掉后甚至不能保证连续, 在 Geogebra 中绘制 $f(x,y)=\frac{xy}{x^2+y^2}$ 的图像, 观察一下这个结论的几何意义是什么?
 
 ```geogebra title="Geogebra"
-f(x,y)=((x y)/(x^(2)+y^(2))) // [!code highlight]
+f(x,y)=((x y)/(x^(2)+y^(2)))
 ```
 
 ### 梯度的性质
@@ -154,7 +154,7 @@ f(x,y)=((x y)/(x^(2)+y^(2))) // [!code highlight]
 > 在 Geogebra 中绘制 $f(x,y)=\frac{xy(x^2-y^2)}{x^2+y^2}$ 的图像, 观察一下这个结论的几何意义是什么?
 
 ```geogebra title="Geogebra"
-f(x,y)=((x*y (x^(2)-y^(2)))/(x^(2)+y^(2))) // [!code highlight]
+f(x,y)=((x*y (x^(2)-y^(2)))/(x^(2)+y^(2)))
 ```
 
 ### 高阶全微分
@@ -192,4 +192,22 @@ $f:\mathbb{R}^2 \to F \quad g:\mathbb{R}^2 \to \mathbb{R}^2$
 
 > 平凡的加法原理.
 
-### 一阶全微分的形式不变性
+### Taylor 公式
+
+设函数 $f(x,y)$ 在点 $(x_0,y_0)$ 的邻域 $U = O((x_0,y_0),r)$ 上具有 $k+1$ 阶连续偏导数，那么对于 $U$ 内每一点 $(x_0+\Delta x, y_0+\Delta y)$ 都成立
+
+$$
+f(x_0+\Delta x, y_0+\Delta y) = \, f(x_0, y_0) + \left( \Delta x \frac{\partial}{\partial x} + \Delta y \frac{\partial}{\partial y} \right) f(x_0, y_0) + \\
+ \frac{1}{2!} \left( \Delta x \frac{\partial}{\partial x} + \Delta y \frac{\partial}{\partial y} \right)^2 f(x_0, y_0) + \cdots + \\
+\frac{1}{k!} \left( \Delta x \frac{\partial}{\partial x} + \Delta y \frac{\partial}{\partial y} \right)^k f(x_0, y_0) + R_k
+$$
+
+其中
+
+$$
+R_k = \frac{1}{(k+1)!} \left( \Delta x \frac{\partial}{\partial x} + \Delta y \frac{\partial}{\partial y} \right)^{k+1} f(x_0 + \theta \Delta x, y_0 + \theta \Delta y) \quad (0 < \theta < 1)
+$$
+
+称为 Lagrange 余项。
+
+> 与一元函数的 Taylor 公式基本相同
