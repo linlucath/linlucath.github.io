@@ -142,9 +142,22 @@ $f:\mathbb{R}^n \to \mathbb{R}^m$
   为向量值函数 $f$ 在 $\boldsymbol{x}$ 点的导数或 Jacobi 矩阵，记为 $f'(\boldsymbol{x})$ (或 $Df(\boldsymbol{x}), J_f(\boldsymbol{x})$)。
 
 > 感到这个定义莫名其妙, 难以理解? 听听
-> [3Blue1Brown 的讲解](https://www/bilibili.com/video/BV1NJ411r7ja/) 吧
+> [3Blue1Brown 的讲解](https://www.bilibili.com/video/BV1NJ411r7ja/) 吧
 
 > 导数不是数, 梯度不是度
+
+### 法平面
+
+曲线 $
+\begin{cases}
+F(x,y,z) = 0, \\
+G(x,y,z) = 0
+\end{cases}
+$ 在 $P_0$ 点的法平面就是由梯度向量 $\text{grad}F(P_0)$ 和 $\text{grad}G(P_0)$ 张成的平面。
+
+### 法线
+
+在空间中, 过 $P_0$ 并以向量 $\text{grad}F(P_0)$ 为方向向量向量的直线称为曲面 $F(x,y,z)=0$ 在 $P_0$ 点的法线.
 
 ## _*性质 / 定理:*_
 
@@ -253,6 +266,63 @@ $$
 称为 Lagrange 余项。
 
 > 与一元函数的 Taylor 公式基本相同
+
+### \* 隐函数定理
+
+若二元函数 $F(x,y)$ 满足条件：
+
+- $F(x_0, y_0) = 0$
+- 在闭矩形 $D = \{(x,y) \mid |x - x_0| \leq a, |y - y_0| \leq b\}$ 上，$F(x,y)$ 连续，且具有连续偏导数
+- $F_y(x_0, y_0) \neq 0$
+
+那么
+
+- 在点 $(x_0, y_0)$ 附近可以从函数方程
+  $$
+  F(x,y) = 0
+  $$
+  唯一确定隐函数
+  $$
+  y = f(x), \quad x \in O(x_0, \rho)
+  $$
+  它满足 $F(x, f(x)) = 0$，以及 $y_0 = f(x_0)$
+- 隐函数 $y = f(x)$ 在 $x \in O(x_0, \rho)$ 上连续
+- 隐函数 $y = f(x)$ 在 $x \in O(x_0, \rho)$ 上具有连续的导数，且
+  $$
+  \frac{dy}{dx} = -\frac{F_x(x,y)}{F_y(x,y)}
+  $$
+
+### 逆映射定理
+
+设 $ P_0 = (u_0, v_0) \in D, x_0 = x(u_0, v_0), y_0 = y(u_0, v_0), P_0' = (x_0, y_0), $ 且 $f$ 在 $D$ 上具有连续导数. 如果在 $ P_0 $ 点处 $f$ 的 Jacobi 行列式
+
+$$
+\left| \frac{\partial(x, y)}{\partial(u, v)} \right|
+= \left| \frac{\partial x}{\partial u} \frac{\partial y}{\partial v} - \frac{\partial x}{\partial v} \frac{\partial y}{\partial u} \right|
+\neq 0,
+$$
+
+那么存在 $P_0' $ 的一个邻域 $O(P_0', \rho)$ 在这个邻域上存在 $ f $ 的具有连续导数的逆映射 $g$:
+
+$$
+\begin{cases}
+u = u(x, y), \\
+v = v(x, y),
+\end{cases}
+\quad (x, y) \in O(P_0', \rho),
+$$
+
+满足
+
+- $$
+    u_0 = u(x_0, y_0), v_0 = v(x_0, y_0)
+  $$
+- $$
+    \frac{\partial u}{\partial x} = \frac{\partial y}{\partial v} \left| \frac{\partial(x, y)}{\partial(u, v)} \right|^{-1}  \quad \frac{\partial u}{\partial y} = -\frac{\partial x}{\partial v} \left| \frac{\partial(x, y)}{\partial(u, v)} \right|^{-1} \\
+    \frac{\partial v}{\partial x} = -\frac{\partial y}{\partial u} \left| \frac{\partial(x, y)}{\partial(u, v)} \right|^{-1} \quad \frac{\partial v}{\partial y} = \frac{\partial x}{\partial u} \left| \frac{\partial(x, y)}{\partial(u, v)} \right|^{-1}
+  $$
+
+> 考虑在两个平面之间的映射, 一个平面为 $x-y$ 平面, 另一个平面为 $u-v$ 平面
 
 ## _*题型 / 例题:*_
 
