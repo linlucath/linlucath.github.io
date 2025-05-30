@@ -1,7 +1,7 @@
 ---
 title: 实用工具记录
 publishDate: 2025-05-27
-description: '向这些工具的作者们致敬'
+description: '记录一些使用之后觉得很好的工具'
 tags:
   - Daily
   - Tools
@@ -10,7 +10,7 @@ heroImage: { src: './thumbnail.jpg', color: '#B4C6DA' }
 language: '中文'
 ---
 
-> 记录一些使用之后觉得很好的工具
+> 向这些工具的作者们致敬
 
 ---
 
