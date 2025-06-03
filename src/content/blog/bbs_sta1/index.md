@@ -9,7 +9,7 @@ heroImage: { src: './thumbnail.jpg', color: '#B4C6DA' }
 language: '中文'
 ---
 
-> 在现实生活中, 只有单一变元的情况终究少数, 各个变量之间错综复杂才是常态
+> 或是真情流露, 或是人生箴言
 
 ---
 
