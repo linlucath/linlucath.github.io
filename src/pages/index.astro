@@ -121,7 +121,23 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
       <Section title='Educations'>
         <Card
           as='a'
-          heading='CS61C'
+          heading='CS 162'
+          subheading='Operating Systems'
+          date='Jun. 2025 - Aug. 2025'
+          href='https://cs162.org/'
+        >
+          {
+            (
+              <ul class='ms-4 list-disc text-muted-foreground'>
+                <li>Learned the fundamentals of operating systems.</li>
+                <li>Implemented core OS components like process management and file systems.</li>
+              </ul>
+            )
+          }
+        </Card>
+        <Card
+          as='a'
+          heading='CS 61C'
           subheading='Computer Architecture'
           date='May. 2025 - Jun. 2025'
           href='https://cs61c.org/'
@@ -137,7 +153,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         </Card>
         <Card
           as='a'
-          heading='CS61B'
+          heading='CS 61B'
           subheading='Data Structures / Software Engineering'
           date='Mar. 2025 - Apr. 2025'
           href='https://sp21.datastructur.es/'
@@ -153,7 +169,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         </Card>
         <Card
           as='a'
-          heading='CS61A'
+          heading='CS 61A'
           subheading='Programming Languages'
           date='Jan. 2025 - Mar. 2025'
           href='https://cs61a.org/'
