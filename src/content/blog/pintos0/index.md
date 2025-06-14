@@ -1,6 +1,6 @@
 ---
 title: Pintos project0 一个不太正常的操作系统
-publishDate: 2025-06-13
+publishDate: 2025-06-12
 description: '一个运行不了程序的操作系统, 该从何下手? '
 tags:
   - CS

@@ -9,7 +9,7 @@ heroImage: { src: './thumbnail.jpg', color: '#B4C6DA' }
 language: '中文'
 ---
 
-> 或是真情流露, 或是人生箴言
+> 或是真情流露, 或是人生建议
 
 ---
 
