@@ -15,6 +15,77 @@ language: '中文'
 
 ## 不定积分
 
+### 需要背诵的不定积分表
+
+$$
+\begin{align*}
+(1) & \quad \int x^a \, dx = \frac{x^{a+1}}{a+1} + C \quad (a \neq -1) \\
+(2) & \quad \int \frac{1}{x} \, dx = \ln |x| + C \\
+(3) & \quad \int a^x \, dx = \frac{a^x}{\ln a} + C \\
+(4) & \quad \int \sin x \, dx = -\cos x + C \\
+(5) & \quad \int \cos x \, dx = \sin x + C \\
+(6) & \quad \int \tan x \, dx = -\ln |\cos x| + C \\
+(7) & \quad \int \cot x \, dx = \ln |\sin x| + C \\
+(8) & \quad \int \sec x \, dx = \ln |\sec x + \tan x| + C \\
+(9) & \quad \int \csc x \, dx = \ln |\csc x - \cot x| + C \\
+(10) & \quad \int \sec^2 x \, dx = \tan x + C \\
+(11) & \quad \int \csc^2 x \, dx = -\cot x + C \\
+(12) & \quad \int \frac{dx}{1+x^2} = \arctan x + C \\
+(13) & \quad \int \frac{dx}{x^2 + a^2} = \frac{1}{a} \arctan \frac{x}{a} + C \\
+(14) & \quad \int \frac{dx}{x^2 - a^2} = \frac{1}{2a} \ln \left| \frac{a-x}{a+x} \right| + C \\
+(15) & \quad \int \frac{dx}{a^2 - x^2} = \frac{1}{2a} \ln \left| \frac{a+x}{a-x} \right| + C \\
+(16) & \quad \int \frac{dx}{\sqrt{1-x^2}} = \arcsin x + C \\
+(17) & \quad \int \frac{dx}{\sqrt{a^2 - x^2}} = \arcsin \frac{x}{a} + C \\
+(18) & \quad \int \frac{dx}{\sqrt{x^2 \pm a^2}} = \ln |x + \sqrt{x^2 \pm a^2}| + C \\
+\end{align*}
+$$
+
+### 不定积分的基本方式
+
+- 第一类换元法 (凑微分法)
+
+$$
+\begin{align*}
+(1) & \quad \int x^2 \cdot \sqrt{x^3 + 1} \, dx \\
+(2) & \quad \int \frac{1}{e^x + 1} \, dx \\
+(3) & \quad \int \tan^3 x \, dx \\
+(4) & \quad \int \frac{1}{\sin^2 x + 2 \cos^2 x} \, dx \\
+\end{align*}
+$$
+
+- 第二类换元法 (变量代换法)
+
+$$
+\begin{align*}
+(1) & \quad \int \frac{1}{(1 - x) \cdot \sqrt{1 - x^2}} \, dx \\
+(2) & \quad \int \frac{1}{x^2 \sqrt{x^2 + 1}} \, dx \\
+(3) & \quad \int \frac{1}{\sqrt{x} + \sqrt[3]{x}} \, dx
+\end{align*}
+$$
+
+- 分部积分法 (两类不同函数相乘)
+
+> 基本公式: $\int u \, dv = uv - \int v \, du$
+
+$$
+\begin{align*}
+(1) & \quad \int x^2 e^x \, dx \\
+(2) & \quad \int x^2 \cos x \, dx \\
+(3) & \quad \int e^{2x} \cos x \, dx
+\end{align*}
+$$
+
+> "反对幂三指", 越靠后的函数积分越容易
+
+- 分式的不定积分
+
+1. 分母可因式分解: 裂项法
+2. 分母不可因式分解, 分子零次: 配方法
+3. 分母不可因式分解, 分子一次: 将分子凑成分母的导数
+4. 分式为三角函数: 万能公式代换
+
+> 技巧: 对于分母为多项式的, 尝试将分母化为单项式
+
 ## 定积分
 
 ## 反常积分
@@ -361,5 +432,7 @@ y = 4
 \end{cases}$在点 $(2, 4, 5)$ 处的切线与 $x$ 轴的正向所夹的角度是多少？
 
 ## 重积分
+
+### 有界闭区域上的重积分
 
 ## 曲面积分, 曲线积分, 场论初步
