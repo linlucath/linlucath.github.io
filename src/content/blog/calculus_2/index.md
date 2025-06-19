@@ -101,7 +101,7 @@ $$
 - 设 $D \subset \mathbb{R}^2$ 为开集, $z=f(x,y)$,$(x,y) \in D$ 是定义在
   $D$ 上的二元函数, $(x_0,y_0) \in D$ 为一定点, 如果存在极限
 
-  $$
+$$
     \lim_{\Delta x \to 0} \frac{f(x_0+\Delta x,y_0)-f(x_0,y_0)}{\Delta
     x},
   $$
