@@ -91,7 +91,7 @@ $$
 ### 利用定积分求数列 极限
 
 > $$
-> 将和式转为\lim_{n \to \infty} \sum_{i=1}^{n} \frac{1}{n} \cdot f\left(\frac{i}{n}\right) = \int_{0}^{1} f(x) \, dx
+> \text{将和式转为}\lim_{n \to \infty} \sum_{i=1}^{n} \frac{1}{n} \cdot f\left(\frac{i}{n}\right) = \int_{0}^{1} f(x) \, dx
 > $$
 
 $$
@@ -125,351 +125,221 @@ $$
 2. 如果是两类不同积分相乘 or 存在变限积分, 尝试分部积分法
 3. 如果是分式, 尝试裂项法或配方法
 
-## 反常积分
+### 定积分的应用
 
-## Euclid 空间上的极限和连续
+- 计算图形的面积
+
+  1. 尝试以 $x$ 或 $y$ 为自变量, 计算图形的面积
+  2. 尝试以 $\theta$ 为自变量, 计算图形的面积
+     > $$
+     > S = \int_{\theta_1}^{\theta_2} \frac{1}{2} r^2 \, d\theta
+     > $$
+
+- 计算弧长
+
+  1. $L = \int_{a}^{b} \sqrt{1 + y'^2} \, dx$，其中 $l$ 的方程为直角坐标方程 $y = y(x)$，$a \leq x \leq b$
+  2. $L = \int_{\alpha}^{\beta} \sqrt{x'^2 + y'^2} \, dx$，其中 $L$ 为参数方程
+     $
+     \begin{cases}
+     x = x(t) \\
+     y = y(t)
+     \end{cases}
+     $
+     $\alpha \leq t \leq \beta$
+  3. $L = \int_{\alpha}^{\beta} \sqrt{r^2(\theta) + r'(\theta)^2} \, d\theta$，其中 $l$ 为极坐标方程：$r = r(\theta)$，$\alpha \leq \theta \leq \beta$
+
+- 求旋转体的侧面积
+
+  4. $S_{\text{侧}} = \int_{a}^{b} 2\pi y(x) \sqrt{1 + y'^2} \, dx$
+  5. $S_{\text{侧}} = \int_{\alpha}^{\beta} 2\pi y(t) \sqrt{x'^2 + y'^2} \, dt$，其中曲线为参数方程
+     $
+     \begin{cases}
+     x = x(t) \\
+     y = y(t)
+     \end{cases}
+     $
+     $\alpha \leq t \leq \beta$
+  6. $S_{\text{侧}} = \int_{\alpha}^{\beta} 2\pi r(\theta) \cdot \cos(\theta) \sqrt{r^2(\theta) + r'(\theta)^2} \, d\theta$，其中曲线为极坐标方程 $r = r(\theta)$
 
 ## 多元函数的微分学
 
-### _*定义 / 概念:*_
+### 多元函数求极限
 
-#### 偏导数
-
-- 设 $D \subset \mathbb{R}^2$ 为开集, $z=f(x,y)$,$(x,y) \in D$ 是定义在
-  $D$ 上的二元函数, $(x_0,y_0) \in D$ 为一定点, 如果存在极限
-
-$$
-    \lim_{\Delta x \to 0} \frac{f(x_0+\Delta x,y_0)-f(x_0,y_0)}{\Delta
-    x},
-$$
-
-那么就称函数 $f$ 在点 $(x_0,y_0)$ 关于 $x$ **可偏导**, 并称此极限为 $f$ 在
-点 $(x_0,y_0)$ 关于 $x$ 的**偏导数**, 记为
+0. 判断极限是否存在 (从不同路径趋近一下)
+1. 直接代入法
+2. 利用恒等变形
+3. 整体代换 + 洛必达
+4. 无穷小替换
+5. 使用极坐标进行代换
 
 $$
-\frac{\partial z}{\partial x}(x_0,y_0) \text{ / } f_x(x_0,y_0) \text
-{ / } \frac{\partial f}{\partial x}(x_0,y_0).
+\begin{align*}
+(1) & \quad \lim_{(x,y) \to (0,0)} \frac{2 - \sqrt{xy+4}}{xy} \\
+(2) & \quad \lim_{(x,y) \to (0,0)} \frac{x^2y}{x^4 + y^2} \\
+(3) & \quad \lim_{(x,y) \to (0,0)} \frac{x^3y}{x^4 + y^4} \\
+\end{align*}
 $$
 
-> "偏导" 译自 "Partial derivative", 应当理解为 "部分的导数 -> 标准方向的导数
-> "
+### 多元隐函数求偏导数
 
-- 如果函数 $f$ 在 $D$ 中每一点都关于 $x$ 可偏导, 则 $D$ 中每一点 $(x,y)$ 与
-  其相应的 $f$ 关于 $x$ 的偏导数 $f_x(x,y)$ 构成了一种对应关系即二元函数关系,
-  它称为 $f$ 关于 $x$ 的**偏导函数** (也称为**偏导数**), 记为
+> 左右同时对对应未定元求偏导数
 
-$$
-\frac{\partial z}{\partial x} \text{ / } f_x(x,y) \text{ / } \frac
-{\partial f}{\partial x}.
-$$
+### 多元函数求极值
 
-- 如果函数 $f$ 在点 $(x_0, y_0)$ 关于 $x, y$ 均可偏导, 则称函数 $f$ 在点 $
-(x_0, y_0)$ **可偏导**
+1. 求驻点
+2. 利用二阶偏导数判别法
 
-> 可偏导 $\nRightarrow$ 连续. 可偏导只决定函数在两个方向的性质, 对其他方向的性
-> 质无能为力
-
-#### 方向导数
-
-- 设 $D \subset \mathbb{R}^2$ 为开集, $z=f(x,y)$ , $(x,y) \in D$ 是定义在
-  $D$ 上的二元函数,$(x_0,y_0) \in D$ 为一定点,$v=(\cos \alpha,\sin \alpha)$
-  为一个方向. 如果极限
-  $$
-  \lim_{t \to 0^+} \frac{f(x_0 + t \cos \alpha, y_0 + t \sin \alpha) - f
-  (x_0, y_0)}{t}
-  $$
-  存在, 则称此极限为函数 $f$ 在点 $(x_0,y_0)$ 的沿方向 $v$ 的**方向导数**,
-  记为 $\frac{\partial f}{\partial v}(x_0,y_0)$.
-
-> 可偏导 $\iff \frac{\partial f}{\partial e_i}(x_0,y_0) = \frac{\partial
- f}{\partial (-e_i)}(x_0,y_0)$
-
-#### 全微分
-
-- 设 $D \subset \mathbb{R}^2$ 为开集, $z = f(x,y)$, $(x,y) \in D$ 是定义
-  在 $D$ 上的二元函数, $(x_0, y_0) \in D$ 为一定点. 若存在只与点 $(x_0, y_0)$
-  有关而与 $\Delta x, \Delta y$ 无关的常数 $A$ 和 $B$, 使得
-
-  $$
-  \Delta z = A \Delta x + B \Delta y + o(\sqrt{\Delta x^2 + \Delta y^2})
-  $$
-
-  则称函数 $f$ 在点 $(x_0, y_0)$ 处是**可微**的, 并称其线性主要部分 $A 
-  \Delta x + B \Delta y$ 为 $f$ 在点 $(x_0, y_0)$ 处的**全微分**, 记为 $dz
-  (x_0, y_0)$ 或 $df(x_0, y_0)$.
-
-- 若（在 $\sqrt{\Delta x^2 + \Delta y^2} \to 0$ 时）将自变量 $x, y$ 的微分
-  $\Delta x, \Delta y$ 分别记为 $dx, dy$, 那么有全微分形式
-  $dz(x_0, y_0) = A dx + B dy$.
-
-> 直观理解: 可微 $\iff$ 存在完美的线性模拟 (切面)
-
-- **全微分公式**:
-
-  $$
-  df(x_0, y_0) = \frac{\partial f}{\partial x}(x_0, y_0) dx + \frac
-  {\partial f}{\partial y}(x_0, y_0) dy.
-  $$
-
-- 如果函数 $f$ 在开集（或区域）$D$ 上的每一点都是可微的，则称 $f$ 在 $D$ 上**
-  可微**。此时成立
-
-  $$
-  dz = \frac{\partial f}{\partial x}(x,y) dx + \frac{\partial f}
-  {\partial y}(x,y) dy.
-  $$
-
-#### 梯度
-
-- 设 $D \subset \mathbb{R}^2$ 为开集，$(x_0, y_0) \in D$ 为一定点。如果函数 $z = f(x, y)$ 在 $(x_0, y_0)$ 点可偏导，则称向量 $(f_x(x_0, y_0), f_y(x_0, y_0))$ 为 $f$ 在点 $(x_0, y_0)$ 的**梯度**，记为 $\text{grad} f(x_0, y_0)$，即
-  $$
-  \text{grad} f(x_0, y_0) = f_x(x_0, y_0) \mathbf{i} + f_y(x_0, y_0) \mathbf{j}.
-  $$
-- 如果 $f$ 在 $(x_0, y_0)$ 点可微，则得到它的另一种表达：
-  $$
-  \frac{\partial f}{\partial \boldsymbol{v}}(x_0, y_0) = \operatorname{grad} f(x_0, y_0) \cdot \boldsymbol{v} = \|\operatorname{grad} f(x_0, y_0)\| \cos(\operatorname{grad} f, \boldsymbol{v}),
-  $$
-  其中 $(\operatorname{grad} f, \boldsymbol{v})$ 表示 $\operatorname{grad} f(x_0, y_0)$ 与 $\boldsymbol{v}$ 的夹角.
-
-> "Gradient" 被译作 "梯度", 但其本义为行走, 在这里描述函数值上升最快的行走方式, **是一个向量**, 私以为翻译为"梯度"不太妥当
-
-#### 向量值函数的导数
-
-$f:\mathbb{R}^n \to \mathbb{R}^m$
-
-- 若 $f$ 的每一个分量函数 $f_i(x_1, x_2, \cdots, x_n)$ $(i = 1, 2, \cdots, m)$ 都在 $\boldsymbol{x}$ 点可偏导，就称向量值函数 $f$ 在 $\boldsymbol{x}$ 点可导，并称矩阵
-
-  $$
-   \left( \frac{\partial f_i}{\partial x_j} \bigg|_{\boldsymbol{x}} \right)_{m \times n}
-  =
-  \begin{pmatrix}
-  \frac{\partial f}{\partial x_1} \bigg|_{\boldsymbol{x}} & \frac{\partial f}{\partial x_2} \bigg|_{\boldsymbol{x}} & \cdots & \frac{\partial f}{\partial x_n} \bigg|_{\boldsymbol{x}}
-  \end{pmatrix} \\
-  =
-  \begin{pmatrix}
-  \frac{\partial f_1}{\partial x_1} \bigg|_{\boldsymbol{x}} & \frac{\partial f_1}{\partial x_2} \bigg|_{\boldsymbol{x}} & \cdots & \frac{\partial f_1}{\partial x_n} \bigg|_{\boldsymbol{x}} \\
-  \frac{\partial f_2}{\partial x_1} \bigg|_{\boldsymbol{x}} & \frac{\partial f_2}{\partial x_2} \bigg|_{\boldsymbol{x}} & \cdots & \frac{\partial f_2}{\partial x_n} \bigg|_{\boldsymbol{x}} \\
-  \vdots & \vdots & \ddots & \vdots \\
-  \frac{\partial f_m}{\partial x_1} \bigg|_{\boldsymbol{x}} & \frac{\partial f_m}{\partial x_2} \bigg|_{\boldsymbol{x}} & \cdots & \frac{\partial f_m}{\partial x_n} \bigg|_{\boldsymbol{x}}
-  \end{pmatrix}
-
-
-  $$
-
-  为向量值函数 $f$ 在 $\boldsymbol{x}$ 点的导数或 Jacobi 矩阵，记为 $f'(\boldsymbol{x})$ (或 $Df(\boldsymbol{x}), J_f(\boldsymbol{x})$)。
-
-> 感到这个定义莫名其妙, 难以理解? 听听
-> [3Blue1Brown 的讲解](https://www.bilibili.com/video/BV1NJ411r7ja/) 吧
-
-> 导数不是数, 梯度不是度
-
-### _*性质 / 定理:*_
-
-#### 可微的充分条件
-
-- 设函数 $z = f(x, y)$ 在 $(x_0, y_0)$ 点的某个邻域上存在偏导数，并且偏导数
-  在 $(x_0, y_0)$ 点连续，那么 $f$ 在 $(x_0, y_0)$ 点可微。
-
+> 判别式：
+>
 > $$
-> f(x_0 + \Delta x, y_0 + \Delta y) - f(x_0, y_0)
-> \\ = f(x_0 + \Delta x, y_0 + \Delta y) - f(x_0, y_0 + \Delta y) + f
-> (x_0, y_0 + \Delta y) - f(x_0, y_0)
-> \\ = f_x(x_0 + \theta_1 \Delta x, y_0 + \Delta y) \Delta x + f_y(x_0,
-> y_0 + \theta_2 \Delta y) \Delta y, \quad 0 < \theta_1, \theta_2 < 1,
+>    D = \begin{vmatrix}
+>    f_{xx} & f_{xy} \\
+>    f_{yx} & f_{yy}
+>    \end{vmatrix} = f_{xx} f_{yy} - (f_{xy})^2
 > $$
 
-> 偏导数连续是一个很重要的条件, 去掉后甚至不能保证连续, 在 Geogebra 中绘制 $f
-(x,y)=\frac{xy}{x^2+y^2}$ 的图像, 观察一下这个结论的几何意义是什么?
+### 多元函数在约束条件下求极值
 
-```geogebra title="Geogebra"
-f(x,y)=((x y)/(x^(2)+y^(2)))
-```
+令约束条件为 $\phi(x,y) = 0$，所求极值为 $f(x,y)$，则只需求函数 $g(x,y, \lambda) = f(x,y) + \lambda \cdot \phi(x,y)$ 的驻点
 
-#### 梯度的性质
-
-- $ \text{grad} (f \cdot g) = g \cdot \text{grad} f + f \cdot \text
-  {grad} g$.
-- $ \text{grad} (\frac{f}{g}) = \frac{g \cdot \text{grad} f - f \cdot
-  \text{grad} g}{g^2}$.
-
-> 有没有觉得和求导法则很像? 想一想梯度是如何计算的
-
-#### 高阶偏导数
-
-- 如果函数 $z = f(x, y)$ 的两个混合偏导数 $f_{xy}$ 和 $f_{yx}$ 在点 $(x_0, 
-y_0)$ 连续，那么等式 $f_{xy}(x_0, y_0) = f_{yx}(x_0, y_0)$ 成立。
-
-> 在 Geogebra 中绘制 $f(x,y)=\frac{xy(x^2-y^2)}{x^2+y^2}$ 的图像, 观察一下
-> 这个结论的几何意义是什么?
-
-```geogebra title="Geogebra"
-f(x,y)=((x*y (x^(2)-y^(2)))/(x^(2)+y^(2)))
-```
-
-#### 高阶全微分
-
-- $$
-   d^k z = (dx \frac{\partial}{\partial x} + dy \frac{\partial}{
-    \partial y})^k \cdot z
-  $$
-
-> 自己推导一下呢
-
-#### 向量值函数的导数
-
-- 向量值函数 $f$ 在 $\mathbf{x}^0$ 点可微的充分必要条件是它的坐标分量函数
-  $f_i(x_1, x_2, \cdots, x_n)$ $(i = 1, 2, \cdots, m)$ 都在 $
- \mathbf{x}^0$ 点可微. 此时成立微分公式
-  $$
-  \text{d}\mathbf{y} = f'(\mathbf{x}^0) \text{d}\mathbf{x}.
-  $$
-
-#### 链式法则
-
-$f:\mathbb{R}^2 \to F \quad g:\mathbb{R}^2 \to \mathbb{R}^2$
-
-- 设 $g$ 在 $(u_0, v_0) \in D_g$ 点可导，即 $x=x(u,v)$, $y=y(u,v)$ 在 $
-(u_0,v_0)$ 点可偏导. 记 $x_0=x(u_0,v_0)$, $y_0=y(u_0,v_0)$，如果 $f$ 在 $
-(x_0,y_0)$ 点可微，那么
-  $$
-  \frac{\partial z}{\partial u}(u_0,v_0) = \frac{\partial z}{\partial x}
-  (x_0,y_0) \frac{\partial x}{\partial u}(u_0,v_0) + \frac{\partial z}
-  {\partial y}(x_0,y_0) \frac{\partial y}{\partial u}(u_0,v_0);
-  $$
-  $$
-  \frac{\partial z}{\partial v}(u_0,v_0) = \frac{\partial z}{\partial x}
-  (x_0,y_0) \frac{\partial x}{\partial v}(u_0,v_0) + \frac{\partial z}
-  {\partial y}(x_0,y_0) \frac{\partial y}{\partial v}(u_0,v_0).
-  $$
-
-> 平凡的加法原理.
-
-#### Taylor 公式
-
-设函数 $f(x,y)$ 在点 $(x_0,y_0)$ 的邻域 $U = O((x_0,y_0),r)$ 上具有 $k+1$
-阶连续偏导数，那么对于 $U$ 内每一点 $(x_0+\Delta x, y_0+\Delta y)$ 都成立
+## 二重积分的计算
 
 $$
-f(x_0+\Delta x, y_0+\Delta y) = \, f(x_0, y_0) + \left( \Delta x \frac
-{\partial}{\partial x} + \Delta y \frac{\partial}{\partial y} \right) f
-(x_0, y_0) + \\
- \frac{1}{2!} \left( \Delta x \frac{\partial}{\partial x} + \Delta y
- \frac{\partial}{\partial y} \right)^2 f(x_0, y_0) + \cdots + \\
-\frac{1}{k!} \left( \Delta x \frac{\partial}{\partial x} + \Delta y \frac
-{\partial}{\partial y} \right)^k f(x_0, y_0) + R_k
+\iint_D f(x,y) \, dx \, dy
 $$
 
-其中
+0. 画出积分区域 $D$ 的草图
 
-$$
-R_k = \frac{1}{(k+1)!} \left( \Delta x \frac{\partial}{\partial x} +
-\Delta y \frac{\partial}{\partial y} \right)^{k+1} f(x_0 + \theta \Delta
-x, y_0 + \theta \Delta y) \quad (0 < \theta < 1)
-$$
+### 非圆周相关区域下二重积分的计算
 
-称为 Lagrange 余项。
+1. 定 $x$ 穿 $y$ 或定 $y$ 穿 $x$ , 转换为分步 两次定积分
 
-> 与一元函数的 Taylor 公式基本相同
+> $$
+> \begin{align*}
+> (1) & \quad \iint_D f(x,y) \, dx \, dy = \int_{a}^{b} \left( \int_{g_1(x)}^{g_2(x)} f(x,y) \, dy \right) dx \\
+> (2) & \quad \iint_D f(x,y) \, dx \, dy = \int_{c}^{d} \left( \int_{h_1(y)}^{h_2(y)} f(x,y) \, dx \right) dy
+> \end{align*}
+> $$
 
-#### 隐函数定理
+### 利用三角换元求解三重积分
 
-若二元函数 $F(x,y)$ 满足条件：
-
-- $F(x_0, y_0) = 0$
-- 在闭矩形 $D = \{(x,y) \mid |x - x_0| \leq a, |y - y_0| \leq b\}$ 上，$F(x,y)$ 连续，且具有连续偏导数
-- $F_y(x_0, y_0) \neq 0$
-
-那么
-
-- 在点 $(x_0, y_0)$ 附近可以从函数方程
-  $$
-  F(x,y) = 0
-  $$
-  唯一确定隐函数
-  $$
-  y = f(x), \quad x \in O(x_0, \rho)
-  $$
-  它满足 $F(x, f(x)) = 0$，以及 $y_0 = f(x_0)$
-- 隐函数 $y = f(x)$ 在 $x \in O(x_0, \rho)$ 上连续
-- 隐函数 $y = f(x)$ 在 $x \in O(x_0, \rho)$ 上具有连续的导数，且
-  $$
-  \frac{dy}{dx} = -\frac{F_x(x,y)}{F_y(x,y)}
-  $$
-
-#### \* 逆映射定理
-
-设 $ P_0 = (u_0, v_0) \in D, x_0 = x(u_0, v_0), y_0 = y(u_0, v_0), P_0' = (x_0, y_0), $ 且 $f$ 在 $D$ 上具有连续导数. 如果在 $ P_0 $ 点处 $f$ 的 Jacobi 行列式
-
-$$
-\left| \frac{\partial(x, y)}{\partial(u, v)} \right|
-= \left| \frac{\partial x}{\partial u} \frac{\partial y}{\partial v} - \frac{\partial x}{\partial v} \frac{\partial y}{\partial u} \right|
-\neq 0,
-$$
-
-那么存在 $P_0' $ 的一个邻域 $O(P_0', \rho)$ 在这个邻域上存在 $ f $ 的具有连续导数的逆映射 $g$:
-
-$$
+> 令
+> $
 \begin{cases}
-u = u(x, y), \\
-v = v(x, y),
+x = r \cos \theta \\
+y = r \sin \theta
 \end{cases}
-\quad (x, y) \in O(P_0', \rho),
-$$
+$从而 $dx \, dy = r \, dr \, d\theta$, 其中系数由几何意义求出
 
-满足
-
-- $$
-    u_0 = u(x_0, y_0), v_0 = v(x_0, y_0)
-  $$
-- $$
-    \frac{\partial u}{\partial x} = \frac{\partial y}{\partial v} \left| \frac{\partial(x, y)}{\partial(u, v)} \right|^{-1}  \quad \frac{\partial u}{\partial y} = -\frac{\partial x}{\partial v} \left| \frac{\partial(x, y)}{\partial(u, v)} \right|^{-1} \\
-    \frac{\partial v}{\partial x} = -\frac{\partial y}{\partial u} \left| \frac{\partial(x, y)}{\partial(u, v)} \right|^{-1} \quad \frac{\partial v}{\partial y} = \frac{\partial x}{\partial u} \left| \frac{\partial(x, y)}{\partial(u, v)} \right|^{-1}
-  $$
-
-> 考虑在两个平面之间的映射, 一个平面为 $x-y$ 平面, 另一个平面为 $u-v$ 平面
-
-### _*应用:*_
-
-#### 空间曲线的切向量
-
-设空间曲线 $\mathbf{r}(t) = (x(t), y(t), z(t))$ 在 $t_0$ 点处可导, 则称向量
+## 三重积分的计算
 
 $$
-\mathbf{r}'(t_0) = \left( \frac{dx}{dt}(t_0), \frac{dy}{dt}(t_0), \frac{dz}{dt}(t_0) \right)
+\iiint_{\Omega} f(x,y,z) \, dx \, dy \, dz
 $$
 
-为曲线 $\mathbf{r}(t)$ 在 $t_0$ 点的**切向量**，记为 $\mathbf{T}(t_0)$。
+0. 画出积分区域 $\Omega$ 的草图
 
-#### 法平面
+### 利用投影法 ("先一后二") 求二重积分
 
-曲线 $
+> 定 $xy$ 穿 $z$，转为对二重积分进行积分
+
+### 利用平面截割法 ("先二后一") 求三重积分
+
+> 定 $z$ 穿 $xy$，转为对三重积分进行积分
+
+### 利用三角换元求三重积分
+
+- 令
+  $
 \begin{cases}
-F(x,y,z) = 0, \\
-G(x,y,z) = 0
+x = r \sin \phi \cos \theta \\
+y = r \sin \phi \sin \theta \\
+z = r \cos \phi
 \end{cases}
-$ 在 $P_0$ 点的法平面就是由梯度向量 $\text{grad}F(P_0)$ 和 $\text{grad}G(P_0)$ 张成的平面。
+$, 则 $dx \, dy \, dz = r^2 \sin \phi \, dr \, d\phi \, d\theta$
 
-#### 法线
+## 曲线积分
 
-在空间中, 过 $P_0$ 并以向量 $\text{grad}F(P_0)$ 为方向向量向量的直线称为曲面 $F(x,y,z)=0$ 在 $P_0$ 点的法线.
+0. 画出曲线的草图
 
-### _*题型 / 例题:*_
+### 对弧长曲线积分 (第一类曲线积分) 的计算
 
-#### 求解偏导数
+$$
+\int_L f(x,y) \, ds
+$$
 
-> 根据加法原理求解
+1. 转为常规积分
 
-#### 求解曲线切线方向
+   > $$
+   > \begin{align*}
+   > ds &= \sqrt{1 + y'(x)^2} \, dx \\
+   > ds &= \sqrt{x'(t)^2 + y'(t)^2} \, dt
+   > \end{align*}
+   > $$
 
-> 将曲线方程看作参数方程, 求解各个自变量关于参数的导数
+2. 代入, 转换为单变量积分
 
-曲线$\begin{cases} 
-z = \frac{x^2 + y^2}{4}, \\
-y = 4 
-\end{cases}$在点 $(2, 4, 5)$ 处的切线与 $x$ 轴的正向所夹的角度是多少？
+### 对坐标的曲线积分 (第二类曲线积分) 的计算
 
-## 重积分
+$$
+\int_L P \, dx + Q \, dy
+$$
 
-### 有界闭区域上的重积分
+> 即在对应投影平面上的积分
 
-## 曲面积分, 曲线积分, 场论初步
+1. 若 $L$ 为直角坐标方程 $y = y(x)$，则
+   > $$
+   > \int_L P \, dx + Q \, dy = \int_{a}^{b} P(x,y(x)) \, dx + Q(x,y(x)) \cdot y'(x) \, dx
+   > $$
+2. 若 $L$ 为参数方程
+   > $$
+   > \int_L P \, dx + Q \, dy = \int_{\alpha}^{\beta} P(x(t),y(t)) \cdot x'(t) + Q(x(t),y(t)) \cdot y'(t) \, dt
+   > $$
+
+### 格林公式
+
+> 使用场景: 曲线为简单闭合曲线
+
+$$
+\int_L P \, dx + Q \, dy = \pm \iint_D \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \, dx \, dy
+$$
+
+其中 $D$ 为 $L$ 所围成的区域
+
+> 一般来说, 逆时针方向为正, 顺时针方向为负
+
+## 曲面积分
+
+### 对面积的曲面积分 (第一类曲面积分) 的计算
+
+$$
+\iint_S f(x,y,z) \, dS
+$$
+
+1. 转为常规积分
+   > $$
+   > dS = \sqrt{1 + \left( \frac{\partial z}{\partial x} \right)^2 + \left( \frac{\partial z}{\partial y} \right)^2} \, dx \, dy
+   > $$
+2. 代入, 转换为双变量积分
+
+### 对坐标的曲面积分 (第二类曲面积分) 的计算
+
+$$
+\iint_{\sum} P \, dx + Q \, dy + R \, dz
+$$
+
+> $$
+> \iint_{\sum}R(x,y,z) \, dx \, dy = \pm \iint_{D_{xy}} R(x,y,z(x,y)) ,dx \, dy
+> $$
+>
+> 坐标轴正方向 (前, 上, 右) 为正方向, 负方向 (后, 下, 左) 为负方向
+
+### 高斯公式
+
+> 使用场景: 曲面为简单闭合曲面
+
+> $$
+> \iint_{\sum} P \, dx\, dy + Q \, dy \, dz + R \, dz \, dx = \pm \iiint_{\Omega} \left( \frac{\partial R}{\partial y} + \frac{\partial Q}{\partial x} + \frac{\partial P}{\partial z} \right) \, dx \, dy \, dz
+> $$
+>
+> 外侧为正, 内侧为负
