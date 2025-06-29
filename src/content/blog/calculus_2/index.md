@@ -3,7 +3,6 @@ title: 数学分析 二 速通
 publishDate: 2025-05-07
 description: '将分析对象扩展至 Euclid 空间'
 tags:
-  - Calculus
   - Math
 heroImage: { src: './thumbnail.jpg', color: '#B4C6DA' }
 language: '中文'

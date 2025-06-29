@@ -4,7 +4,6 @@ publishDate: 2025-06-10
 description: '如何快速上手一份代码'
 tags:
   - CS
-  - Work
 heroImage: { src: './thumbnail.jpg', color: '#B4C6DA' }
 language: '中文'
 ---

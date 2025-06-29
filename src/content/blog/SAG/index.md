@@ -3,9 +3,7 @@ title: 空间解析几何速成
 publishDate: 2025-06-02
 description: '以数值计算解决空间问题'
 tags:
-  - SAG
   - Math
-  - Multivariable
 heroImage: { src: './thumbnail.jpg', color: '#B4C6DA' }
 language: '中文'
 ---
