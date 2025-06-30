@@ -38,10 +38,6 @@ language: '中文'
 
   > 学习 Git 的一个很好的方式是自己搓一个 [Gitlet](https://sp21.datastructur.es/materials/proj/proj2/proj2)
 
-- [Vim](https://www.vim.org/) - 一个强大的文本编辑器, 支持多种编程语言和插件
-
-> 在 Linux 中运行 `vimtutor`, 你便能学会使用 Vim 完成大部分的文本编辑工作
-
 ## 代码编写
 
 - [GitHub Copilot](https://github.com/features/copilot) - GitHub 的 AI 编程插件, 对 API 查询, Code Review 等非常有帮助. 绝大多数主流 IDE 都有其插件. **学生可以免费使用**
@@ -54,4 +50,4 @@ language: '中文'
 
 - [Visual Studio Code](https://code.visualstudio.com/) - 微软的开源文本编辑器, 支持多种编程语言和插件
 
-  > 有好多好多好用的插件
+  > 有很多很多好用的插件
