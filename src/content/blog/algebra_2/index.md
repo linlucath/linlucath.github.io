@@ -127,7 +127,9 @@ $$
   $$
 
 - 度量矩阵  
-   取 $ V $ 的一组基, 其 Gram 矩阵成为度量矩阵
+  取 $ V $ 的一组基, 其 Gram 矩阵为度量矩阵
+
+  - 度量矩阵正定
 
 - 利用度量矩阵计算内积
 
@@ -141,19 +143,22 @@ $$
 
 - 正交矩阵: 由一组正交*标准*基构成的矩阵, $A A^T = I$
 
-- 正交变换: 保持内积的线性变换  
-  $\Leftrightarrow$ 保持长度  
-  $\Leftrightarrow$ 保持某组一组正交标准基  
-  $\Leftrightarrow$ 在某组一组正交标准基下, 其矩阵为正交矩阵
+### 正交变换: 保持内积的线性变换
 
-  - 第一类正交变换: $det(A) = 1$
-  - 第二类正交变换: $det(A) = -1$
+$\Leftrightarrow$ 保持长度  
+ $\Leftrightarrow$ 保持某组一组正交标准基  
+ $\Leftrightarrow$ 在某组一组正交标准基下, 其矩阵为正交矩阵
 
-- 正交补
-  $$
-  V^\perp = \{\alpha \in V | \forall v \in V, \langle \alpha, v \rangle = 0\}
-  $$
-  - 求解正交补: 将 $V$ 的一组基 $\{\alpha_1, \ldots, \alpha_n\}$ 代入内积定义, 求解线性方程组, 可以得到 $V^\perp$ 的一组基, 将其单位化便是 $V^\perp$ 的标准正交基
+- 第一类正交变换: $det(A) = 1$
+- 第二类正交变换: $det(A) = -1$
+
+### 正交补
+
+$$
+V^\perp = \{\alpha \in V | \forall v \in V, \langle \alpha, v \rangle = 0\}
+$$
+
+- 求解正交补: 将 $V$ 的一组基 $\{\alpha_1, \ldots, \alpha_n\}$ 代入内积定义, 求解线性方程组, 可以得到 $V^\perp$ 的一组基, 将其单位化便是 $V^\perp$ 的标准正交基
 
 ## 实对称矩阵的标准形
 
@@ -164,34 +169,173 @@ $$
 3. 存在正交矩阵 $C$, 使得 $C^{-1}AC = C^TAC$ 是对角矩阵
 4. 存在 $V$ 的一组正交标准基, 使得 $\mathcal{A}$ 在该基下的矩阵为对角矩阵
 
-- 实对称矩阵的正交对角化步骤
-  - 求解特征值
-  - 求解特征向量
-  - 将特征向量正交单位化
-  - 令 $C = (\alpha_{11}, \alpha_{12}, \ldots, \alpha_{1r_1}, \ldots \alpha_{kr_k})$, 则 $C^{-1}AC = C^TAC$ 是对角矩阵
+### 使用正交矩阵对实对称矩阵进行对角化
+
+- 求解特征值
+- 求解特征向量
+- 将特征向量正交单位化
+- 令 $C = (\alpha_{11}, \alpha_{12}, \ldots, \alpha_{1r_1}, \ldots \alpha_{kr_k})$, 则 $C^{-1}AC = C^TAC$ 是对角矩阵
+
+### 实对称矩阵的正交对角化方法
+
+- 将待变换矩阵 \(A\) 写在一条横线上方，单位阵 \(I\) 写在横线下方。
+- 横线下方矩阵作列变换，上方矩阵作相同列变换，再作对应行变换（下方矩阵2,3列互换，则上方矩阵2,3列互换，再2,3行互换）。
+- 设横线上方矩阵 \(A\) 变成对角阵 \(B\) 时，横线下方的 \(I\) 变成矩阵 \(C\)，
+- 一定有 \(C^TAC = B\)。
 
 ## 二次型
 
 - 二次型: 数域 $\mathbb{F}$ 上的二次齐次多项式函数
 
 - 二次型的矩阵表示:  
-   记为 $A$, 则二次型 $f$ 表示为
+   将对应的对称表示矩阵记为 $A$, 则二次型 $f$ 表示为
 
   $$
   f = x^T A x = \sum_{i=1}^n \sum_{j=1}^n a_{ij} x_i x_j
   $$
 
-- 可逆线性替换
-  记可逆矩阵 $C$, 则称 $X = CY$ 为可逆线性变换
+- 可逆线性替换: 记可逆矩阵 $C$, 则称 $X = CY$ 为可逆线性变换
 
-- 合同  
-   若存在可逆矩阵 $C$, 使得 $C^T A C = B$, 则称 $A$ 和 $B$ 合同
-  - 自反性: $A$ 合同于 $A$
-  - 对称性: $A$ 合同于 $B$ 当且仅当 $B$ 合同于 $A$
-  - 传递性: $A$ 合同于 $B$, $B$ 合同于 $C$ $\Rightarrow$ $A$ 合同于 $C$
-  - 相似 $\Rightarrow$ 合同 $\Rightarrow$ 相抵
-  - 欧式空间在不同基下的度量矩阵合同
+- 标准形: 只含平方项的二次型
 
-## 双线性函数
+  - 将二次型化为标准型的方式: 若有平方项, 进行配方, 否则先进行一次中值换元, 再进行配方
 
-## Jordan 标准形
+### 二次型规范形:
+
+- 实二次型规范形: 平方项系数为 $1$ 的标准形
+- 复二次型规范形: 平方项系数为 $\pm 1$ 的标准形
+
+### 合同
+
+若存在可逆矩阵 $C$, 使得 $C^T A C = B$, 则称 $A$ 和 $B$ 合同
+
+- 自反性: $A$ 合同于 $A$
+- 对称性: $A$ 合同于 $B$ 当且仅当 $B$ 合同于 $A$
+- 传递性: $A$ 合同于 $B$, $B$ 合同于 $C$ $\Rightarrow$ $A$ 合同于 $C$
+- 相似 $\Rightarrow$ 合同 $\Rightarrow$ 相抵
+- 欧式空间在不同基下的度量矩阵合同
+- 合同 $\Leftrightarrow$ 有相同的正特征值个数, 负特征值个数, 零特征值个数
+
+- 正定二次型: 值恒大于 $0$ 的二次型
+
+### 正定矩阵: 正定二次型的矩阵表示
+
+- 对于正定矩阵 $A$, 存在唯一的实对称矩阵 $B$, 使得 $B^2 = A$
+
+- 正定矩阵的乘积不一定是正定矩阵, 因为可能不再对称
+
+- 正定 $\Leftrightarrow$ 与 $I$ 合同 $\Leftrightarrow$ 存在正交矩阵 $C$, 使得 $C^T A C = D$, 其中 $D$ 是对角矩阵, 且对角线上的元素均为正数 $\Leftrightarrow$ 顺序主子式均大于 $0$
+
+- 可逆实对称矩阵 $\Leftrightarrow$ 存在实矩阵 $C$, 使得 $AC + C^TA $ 为正定矩阵
+
+> 可逆, 秩相关条件考虑等价为方程的解
+
+### 双线性函数: 固定任一个变量时都是另一个变量的线性函数
+
+- 左线性映射: 固定右变量时是左变量的线性映射
+- 右线性映射: 固定左变量时是右变量的线性映射
+- 非退化 $\Leftrightarrow$ 其在某组基下的度量矩阵表示可逆
+- 对称双线性函数在某组基下的度量矩阵表示为对角阵
+- 令 $A=\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$，反对称双线性函数在某组基下的度量矩阵表示为
+  $$
+  \begin{pmatrix}
+  A & 0 & & \\
+  0 & A & & \\
+  & & \ddots & \\
+  & & & 0
+  \end{pmatrix}
+  $$
+
+## $\lambda$ 矩阵
+
+- 半单: 可对角化的复方阵
+
+- 幂零指数为 $m$ $\rightarrow$ $A$ 的最小多项式为 $\lambda^m$
+
+### $\lambda$ 矩阵
+
+- $\lambda$ 矩阵: 所有元素为关于 $\lambda$ 的多项式的矩阵
+
+### $\lambda$ 矩阵的相抵标准形
+
+> 任一 $A(\lambda)$ 必可经 $\lambda$-初等变换相抵于如下形状的矩阵：
+>
+> $$
+> D(\lambda)=\begin{pmatrix}
+> d_1(\lambda) & & & & \\
+> & d_2(\lambda) & & & O \\
+> & & \ddots & & \\
+> & & & d_r(\lambda) & \\
+> & O & & & O
+> \end{pmatrix}
+> $$
+>
+> 其中 $d_i(\lambda)$ 都是首 1 多项式，且 $d_i(\lambda) \mid d_j(\lambda)$ 对所有的 $1 \leq i \leq j \leq r, r = R(A(\lambda))$ > $D(\lambda)$ 称为 $\lambda$-矩阵 $A(\lambda)$ 的**相抵标准形**。
+
+- 矩阵 $A$, $B$ 相似 $\Leftrightarrow$ $\lambda I - A$ 和 $\lambda I - B$ 相抵
+
+### $Frobenius$ 块
+
+设 $A$ 是有限维线性空间 $V$ 上的线性变换，$V$ 上非零向量 $\alpha$ 生成一个循环不变 $A$-子空间 $I(\alpha)$，设 $A|_{I(\alpha)}$ 的最小多项式为 $f(\lambda) = \lambda^r + a_{r-1}\lambda^{r-1} + \cdots + a_1\lambda + a_0$
+
+则：
+
+1. $\alpha, A\alpha, \cdots, A^{r-1}\alpha$ 是 $I(\alpha)$ 的一组基；
+2. $A|_{I(\alpha)}$ 在基 $\alpha, A\alpha, \cdots, A^{r-1}\alpha$ 下的矩阵为
+   $$
+   A = \begin{pmatrix}
+   0 & 0 & \cdots & 0 & -a_0 \\
+   1 & 0 & \cdots & 0 & -a_1 \\
+   0 & 1 & \cdots & 0 & -a_2 \\
+   \vdots & \vdots & \ddots & \vdots & \vdots \\
+   0 & 0 & \cdots & 1 & -a_{r-1}
+   \end{pmatrix}
+   $$
+
+$A$ 的 $1, 2, \cdots, r-1$ 阶行列式因子为 1。
+
+$A|_{I(\alpha)}$ 的最小多项式 = $A|_{I(\alpha)}$ 的特征多项式 = $A$ 的 $r$ 阶行列式因子
+
+$A$ 的最小多项式 = $A$ 的特征多项式 = $A$ 的 $r$ 阶行列式因子 = $f(\lambda)$
+
+### $Frobenius$ 标准形 / 有理标准形
+
+**定理2.** 设 $A \in F^{n \times n}$ 的不变因子组为 $1, \cdots, 1, d_1(\lambda), \cdots, d_k(\lambda)$，其中
+
+$$d_i(\lambda) = \lambda^{r_i} + c_{i,r_i-1}\lambda^{r_i-1} + \cdots + c_{i,1}\lambda + c_0 \text{ 是 } r_i \text{ 次多项式}$$
+则
+
+$A$ 相似于分块对角阵 $F = \begin{pmatrix}
+F_1 & & \\
+& \ddots & \\
+& & F_k
+\end{pmatrix}$, 其中 $F_i = \begin{pmatrix}
+0 & 0 & \cdots & 0 & -c_{i,0} \\
+1 & 0 & \cdots & 0 & -c_{i,1} \\
+0 & 1 & \cdots & 0 & -c_{i,2} \\
+\vdots & \vdots & \ddots & \vdots & \vdots \\
+0 & 0 & \cdots & 1 & -c_{i,r_i-1}
+\end{pmatrix}$.  
+这样的 $F$ 称为 $A$ 的 $Frobenius$ 标准形 / 有理标准形。
+
+### 初等因子
+
+设 $A$ 的相抵标准形为 $\text{diag}(1, \cdots 1, d_1(\lambda), \cdots, d_r(\lambda))$
+
+将 $A$ 的不变因子均分解为首 $1$ 不可约多项式之乘积：
+
+$$d_1(\lambda) = (\lambda - \lambda_1)^{e_{11}} (\lambda - \lambda_2)^{e_{12}} \cdots (\lambda - \lambda_t)^{e_{1t}}$$
+
+$$d_2(\lambda) = (\lambda - \lambda_1)^{e_{21}} (\lambda - \lambda_2)^{e_{22}} \cdots (\lambda - \lambda_t)^{e_{2t}}$$
+
+$$\cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots$$
+
+$$d_r(\lambda) = (\lambda - \lambda_1)^{e_{r1}} (\lambda - \lambda_2)^{e_{r2}} \cdots (\lambda - \lambda_t)^{e_{rt}}$$
+
+$(\lambda - \lambda_j)^{e_{ij}} (e_{ij} > 0)$ 称为 $A$ 的初等因子
+
+- **$A$ 的初等因子组**：$A$ 的全体初等因子所成集合
+
+- $A$ 与 $B$ 在 $F$ 上相似 $\Leftrightarrow$ $A$ 与 $B$ 有相同的初等因子组。
+
+### $Jordan$ 标准形
