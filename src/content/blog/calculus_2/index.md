@@ -87,7 +87,7 @@ $$
 
 ## 定积分
 
-### 利用定积分求数列 极限
+### 利用定积分求数列极限
 
 > $$
 > \text{将和式转为}\lim_{n \to \infty} \sum_{i=1}^{n} \frac{1}{n} \cdot f\left(\frac{i}{n}\right) = \int_{0}^{1} f(x) \, dx
@@ -300,7 +300,7 @@ $$
 > 使用场景: 曲线为简单闭合曲线
 
 $$
-\int_L P \, dx + Q \, dy = \pm \iint_D \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \, dx \, dy
+\oint_L P \, dx + Q \, dy = \pm \iint_D \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \, dx \, dy
 $$
 
 其中 $D$ 为 $L$ 所围成的区域
@@ -338,7 +338,7 @@ $$
 > 使用场景: 曲面为简单闭合曲面
 
 > $$
-> \iint_{\sum} P \, dx\, dy + Q \, dy \, dz + R \, dz \, dx = \pm \iiint_{\Omega} \left( \frac{\partial R}{\partial y} + \frac{\partial Q}{\partial x} + \frac{\partial P}{\partial z} \right) \, dx \, dy \, dz
+> \oiint_{\sum} P \, dx\, dy + Q \, dy \, dz + R \, dz \, dx = \pm \iiint_{\Omega} \left( \frac{\partial R}{\partial y} + \frac{\partial Q}{\partial x} + \frac{\partial P}{\partial z} \right) \, dx \, dy \, dz
 > $$
 >
 > 外侧为正, 内侧为负
@@ -347,30 +347,127 @@ $$
 
 ### 定积分
 
-#### 黎曼积分定义
+- 黎曼积分定义
 
-设 $f(x)$ 是定义在 $[a,b]$ 上的有界函数，在 $[a,b]$ 上任意取分点 $\{x_i\}_{i=0}^n$，作成一种划分
+  设 $f(x)$ 是定义在 $[a,b]$ 上的有界函数，在 $[a,b]$ 上任意取分点 $\{x_i\}_{i=0}^n$，作成一种划分
 
-$$P: a = x_0 < x_1 < x_2 < \cdots < x_n = b$$
+  $$
+  P: a = x_0 < x_1 < x_2 < \cdots < x_n = b
+  $$
 
-并任意取点 $\xi_i \in [x_{i-1}, x_i]$。记小区间 $[x_{i-1}, x_i]$ 的长度为 $\Delta x_i = x_i - x_{i-1}$，并令 $\lambda = \max_{1 \leq i \leq n}(\Delta x_i)$，若当 $\lambda \to 0$ 时，极限
+  并任意取点 $\xi_i \in [x_{i-1}, x_i]$。记小区间 $[x_{i-1}, x_i]$ 的长度为 $\Delta x_i = x_i - x_{i-1}$，并令 $\lambda = \max_{1 \leq i \leq n}(\Delta x_i)$，若当 $\lambda \to 0$ 时，极限
 
-$$\lim_{\lambda \to 0} \sum_{i=1}^{n} f(\xi_i) \Delta x_i$$
+  $$
+  \lim_{\lambda \to 0} \sum_{i=1}^{n} f(\xi_i) \Delta x_i
+  $$
 
-存在，且极限值既与划分 $P$ 无关，又与对 $\xi_i$ 的取法无关，则称 $f(x)$ 在 $[a,b]$ 上 **Riemann 可积**，和式
+  存在，且极限值既与划分 $P$ 无关，又与对 $\xi_i$ 的取法无关，则称 $f(x)$ 在 $[a,b]$ 上 **Riemann 可积**，和式
 
-$$S_n = \sum_{i=1}^{n} f(\xi_i) \Delta x_i$$
+  $$
+  S_n = \sum_{i=1}^{n} f(\xi_i) \Delta x_i
+  $$
 
-称为 **Riemann 和**，其极限值 $I$ 称为 $f(x)$ 在 $[a,b]$ 上的**定积分**，记为
+  称为 **Riemann 和**，其极限值 $I$ 称为 $f(x)$ 在 $[a,b]$ 上的**定积分**，记为
 
-$$I = \int_a^b f(x) \, dx$$
+  $$
+  I = \int_a^b f(x) \, dx
+  $$
 
-这里 $a$ 和 $b$ 分别被称为积分的下限和上限。
+  这里 $a$ 和 $b$ 分别被称为积分的下限和上限。
 
-#### 可积条件
+- 可积条件
 
 > 有界函数 $f(x)$ 在 $[a,b]$ 上积分的充分必要条件是，对于任意分割 $P$，当 $\lambda = \max(\Delta x_i) \to 0$ 时，Darboux 大和与 Darboux 小和的极限相等，即成立
 >
 > $$
 > \lim_{\lambda \to 0} \overline{S}(P) = L = l = \lim_{\lambda \to 0} \underline{S}(P)
 > $$
+
+- 积分线函数
+
+  见 [定积分的应用](#定积分的应用)
+
+- 黎曼求和
+
+  见 [利用定积分求数列极限](#利用定积分求数列极限)
+
+- 定积分的计算技巧
+
+  见[定积分的求解](#定积分的求解), [华里氏公式](#华里氏公式)
+
+- 反常积分的敛散性判定
+
+  放缩, 计算其定积分即可
+
+### 多元函数微分学
+
+- 可微的判定
+
+  设函数 $z = f(x, y)$ 在 $(x_0, y_0)$ 点的某个邻域上存在偏导数，并且偏导数在 $(x_0, y_0)$ 点连续，那么 $f$ 在 $(x_0, y_0)$ 点可微。
+
+- 混合偏导相等判定
+
+  如果函数 $z = f(x, y)$ 的两个混合偏导数 $f_{xy}$ 和 $f_{yx}$ 在点 $(x_0, y_0)$ 连续，那么等式
+
+  $$
+  f_{xy}(x_0, y_0) = f_{yx}(x_0, y_0)
+  $$
+
+  成立。
+
+- Taylor 展开
+
+  **定理 12.3.3（Taylor 公式）** 设函数 $f(x,y)$ 在点 $(x_0, y_0)$ 的邻域 $U = O((x_0, y_0), r)$ 上具有 $k+1$ 阶连续偏导数，那么对于 $U$ 内每一点 $(x_0 + \Delta x, y_0 + \Delta y)$ 都成立
+
+  $$
+  \begin{align}
+  f(x_0 + \Delta x, y_0 + \Delta y) &= f(x_0, y_0) + \left( \Delta x \frac{\partial}{\partial x} + \Delta y \frac{\partial}{\partial y} \right) f(x_0, y_0) + \\
+  &\quad \frac{1}{2!} \left( \Delta x \frac{\partial}{\partial x} + \Delta y \frac{\partial}{\partial y} \right)^2 f(x_0, y_0) + \cdots + \\
+  &\quad \frac{1}{k!} \left( \Delta x \frac{\partial}{\partial x} + \Delta y \frac{\partial}{\partial y} \right)^k f(x_0, y_0) + R_k
+  \end{align}
+  $$
+
+  其中 $R_k = \frac{1}{(k+1)!} \left( \Delta x \frac{\partial}{\partial x} + \Delta y \frac{\partial}{\partial y} \right)^{k+1} f(x_0 + \theta \Delta x, y_0 + \theta \Delta y)$，$(0 < \theta < 1)$ 称为 **Lagrange 余项**。
+
+- 无条件极值
+
+  见 [多元函数求极值](#多元函数求极值)
+
+- 条件极值
+
+  见 [多元函数在约束条件下求极值](#多元函数在约束条件下求极值)
+
+### 多元函数积分学
+
+- 二重积分的计算
+
+  见 [二重积分的计算](#二重积分的计算)
+
+- 三重积分的计算
+
+  见 [三重积分的计算](#三重积分的计算)
+
+- 曲线积分
+
+  见 [曲线积分](#曲线积分)
+
+- 曲面积分
+
+  见 [曲面积分](#曲面积分)
+
+- 积分与路径无关
+
+  设 $D$ 为平面上的单连通区域，$P(x,y)$，$Q(x,y)$ 在 $D$ 上具有连续偏导数，则下面的四个命题等价：
+
+  1.  对于 $D$ 内的任意一条光滑（或分段光滑）闭曲线 $L$，
+      $$\oint_L P\,dx + Q\,dy = 0;$$
+
+  2.  曲线积分 $\int_L P\,dx + Q\,dy$ 与路径无关；
+
+  3.  存在 $D$ 上的可微函数 $U(x,y)$，使得
+      $$dU = P\,dx + Q\,dy,$$
+
+  即 $P\,dx + Q\,dy$ 为 $U(x,y)$ 的全微分，这时称 $U(x,y)$ 为1-形式 $P\,dx + Q\,dy$ 的**原函数**；
+
+  4.  在 $D$ 内成立等式
+      $$\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}.$$
