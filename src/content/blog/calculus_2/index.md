@@ -342,3 +342,35 @@ $$
 > $$
 >
 > 外侧为正, 内侧为负
+
+## 期末考点
+
+### 定积分
+
+#### 黎曼积分定义
+
+设 $f(x)$ 是定义在 $[a,b]$ 上的有界函数，在 $[a,b]$ 上任意取分点 $\{x_i\}_{i=0}^n$，作成一种划分
+
+$$P: a = x_0 < x_1 < x_2 < \cdots < x_n = b$$
+
+并任意取点 $\xi_i \in [x_{i-1}, x_i]$。记小区间 $[x_{i-1}, x_i]$ 的长度为 $\Delta x_i = x_i - x_{i-1}$，并令 $\lambda = \max_{1 \leq i \leq n}(\Delta x_i)$，若当 $\lambda \to 0$ 时，极限
+
+$$\lim_{\lambda \to 0} \sum_{i=1}^{n} f(\xi_i) \Delta x_i$$
+
+存在，且极限值既与划分 $P$ 无关，又与对 $\xi_i$ 的取法无关，则称 $f(x)$ 在 $[a,b]$ 上 **Riemann 可积**，和式
+
+$$S_n = \sum_{i=1}^{n} f(\xi_i) \Delta x_i$$
+
+称为 **Riemann 和**，其极限值 $I$ 称为 $f(x)$ 在 $[a,b]$ 上的**定积分**，记为
+
+$$I = \int_a^b f(x) \, dx$$
+
+这里 $a$ 和 $b$ 分别被称为积分的下限和上限。
+
+#### 可积条件
+
+> 有界函数 $f(x)$ 在 $[a,b]$ 上积分的充分必要条件是，对于任意分割 $P$，当 $\lambda = \max(\Delta x_i) \to 0$ 时，Darboux 大和与 Darboux 小和的极限相等，即成立
+>
+> $$
+> \lim_{\lambda \to 0} \overline{S}(P) = L = l = \lim_{\lambda \to 0} \underline{S}(P)
+> $$
