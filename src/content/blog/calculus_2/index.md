@@ -25,17 +25,17 @@ $$
 (5) & \quad \int \cos x \, dx = \sin x + C \\
 (6) & \quad \int \tan x \, dx = -\ln |\cos x| + C \\
 (7) & \quad \int \cot x \, dx = \ln |\sin x| + C \\
-(8) & \quad \int \sec x \, dx = \ln |\sec x + \tan x| + C \\
-(9) & \quad \int \csc x \, dx = \ln |\csc x - \cot x| + C \\
+*(8) & \quad \int \sec x \, dx = \ln |\sec x + \tan x| + C \\
+*(9) & \quad \int \csc x \, dx = \ln |\csc x - \cot x| + C \\
 (10) & \quad \int \sec^2 x \, dx = \tan x + C \\
 (11) & \quad \int \csc^2 x \, dx = -\cot x + C \\
 (12) & \quad \int \frac{dx}{1+x^2} = \arctan x + C \\
 (13) & \quad \int \frac{dx}{x^2 + a^2} = \frac{1}{a} \arctan \frac{x}{a} + C \\
-(14) & \quad \int \frac{dx}{x^2 - a^2} = \frac{1}{2a} \ln \left| \frac{a-x}{a+x} \right| + C \\
-(15) & \quad \int \frac{dx}{a^2 - x^2} = \frac{1}{2a} \ln \left| \frac{a+x}{a-x} \right| + C \\
+*(14) & \quad \int \frac{dx}{x^2 - a^2} = \frac{1}{2a} \ln \left| \frac{a-x}{a+x} \right| + C \\
+*(15) & \quad \int \frac{dx}{a^2 - x^2} = \frac{1}{2a} \ln \left| \frac{a+x}{a-x} \right| + C \\
 (16) & \quad \int \frac{dx}{\sqrt{1-x^2}} = \arcsin x + C \\
 (17) & \quad \int \frac{dx}{\sqrt{a^2 - x^2}} = \arcsin \frac{x}{a} + C \\
-(18) & \quad \int \frac{dx}{\sqrt{x^2 \pm a^2}} = \ln |x + \sqrt{x^2 \pm a^2}| + C \\
+*(18) & \quad \int \frac{dx}{\sqrt{x^2 \pm a^2}} = \ln |x + \sqrt{x^2 \pm a^2}| + C \\
 \end{align*}
 $$
 
