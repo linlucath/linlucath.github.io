@@ -78,10 +78,10 @@ $$
 
 - 分式的不定积分
 
-1. 分母可因式分解: 裂项法
-2. 分母不可因式分解, 分子零次: 配方法
-3. 分母不可因式分解, 分子一次: 将分子凑成分母的导数
-4. 分式为三角函数: 万能公式代换
+  1.  分母可因式分解: 裂项法
+  2.  分母不可因式分解, 分子零次: 配方法
+  3.  分母不可因式分解, 分子一次: 将分子凑成分母的导数
+  4.  分式为三角函数: 万能公式代换
 
 > 技巧: 对于分母为多项式的, 尝试将分母化为单项式
 
@@ -100,7 +100,13 @@ $$
 ### 变上限的定积分求导
 
 > $$
-> \int_{a}^{f(x)} g(t) \, dt = \int_{a}^{f(x)} g(f(x)) \, df(x) =g(f(x)) \cdot f'(x)
+> \frac{d}{dx}\int_{a}^{f(x)} g(t) \, dt = g(f(x)) \cdot f'(x)
+> $$
+>
+> 更一般的情况：
+>
+> $$
+> \frac{d}{dx}\int_{u(x)}^{v(x)} g(t) \, dt = g(v(x)) \cdot v'(x) - g(u(x)) \cdot u'(x)
 > $$
 
 ### 华里氏公式
@@ -164,12 +170,12 @@ $$
 
 ### 多元函数求极限
 
-0. 判断极限是否存在 (从不同路径趋近一下)
-1. 直接代入法
-2. 利用恒等变形
-3. 整体代换 + 洛必达
-4. 无穷小替换
-5. 使用极坐标进行代换
+0.  判断极限是否存在 (从不同路径趋近一下)
+1.  直接代入法
+2.  利用恒等变形
+3.  整体代换 + 洛必达
+4.  无穷小替换
+5.  使用极坐标进行代换
 
 $$
 \begin{align*}
@@ -196,6 +202,8 @@ $$
 >    f_{yx} & f_{yy}
 >    \end{vmatrix} = f_{xx} f_{yy} - (f_{xy})^2
 > $$
+>
+> $D$ 为正且 $f_{xx} > 0$ 时为极小值点；$D$ 为正且 $f_{xx} < 0$ 时为极大值点；$D$ 为负时为鞍点；$D = 0$ 时无法判别。
 
 ### 多元函数在约束条件下求极值
 
@@ -220,7 +228,7 @@ $$
 > \end{align*}
 > $$
 
-### 利用三角换元求解三重积分
+### 利用三角换元求解二重积分
 
 > 令
 > $
@@ -292,7 +300,7 @@ $$
    > $$
 2. 若 $L$ 为参数方程
    > $$
-   > \int_L P \, dx + Q \, dy = \int_{\alpha}^{\beta} P(x(t),y(t)) \cdot x'(t) + Q(x(t),y(t)) \cdot y'(t) \, dt
+   > \int_L P \, dx + Q \, dy = \int_{\alpha}^{\beta} P(x(t),y(t)) \cdot x'(t)\, dt + Q(x(t),y(t)) \cdot y'(t) \, dt
    > $$
 
 ### 格林公式
@@ -337,10 +345,12 @@ $$
 
 > 使用场景: 曲面为简单闭合曲面
 
-> $$
-> \oiint_{\sum} P \, dx\, dy + Q \, dy \, dz + R \, dz \, dx = \pm \iiint_{\Omega} \left( \frac{\partial R}{\partial y} + \frac{\partial Q}{\partial x} + \frac{\partial P}{\partial z} \right) \, dx \, dy \, dz
-> $$
->
+$$
+\oiint_{\sum} P \, dx\, dy + Q \, dy \, dz + R \, dz \, dx = \pm \iiint_{\Omega} \left( \frac{\partial R}{\partial y} + \frac{\partial Q}{\partial x} + \frac{\partial P}{\partial z} \right) \, dx \, dy \, dz
+$$
+
+其中 $\Omega$ 为 $\sum$ 所围成的区域
+
 > 外侧为正, 内侧为负
 
 ## 期末考点
@@ -466,8 +476,7 @@ $$
 
   3.  存在 $D$ 上的可微函数 $U(x,y)$，使得
       $$dU = P\,dx + Q\,dy,$$
-
-  即 $P\,dx + Q\,dy$ 为 $U(x,y)$ 的全微分，这时称 $U(x,y)$ 为1-形式 $P\,dx + Q\,dy$ 的**原函数**；
+      即 $P\,dx + Q\,dy$ 为 $U(x,y)$ 的全微分，这时称 $U(x,y)$ 为1-形式 $P\,dx + Q\,dy$ 的**原函数**；
 
   4.  在 $D$ 内成立等式
       $$\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}.$$
