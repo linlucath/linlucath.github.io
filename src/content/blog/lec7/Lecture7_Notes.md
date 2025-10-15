@@ -1,6 +1,6 @@
 ---
 title: 'Startup lecture 7'
-publishDate: 2025-09-29
+publishDate: 2025-09-30
 description: 'TODO'
 tags:
   - Startup
@@ -238,7 +238,7 @@ How did you hire people that you felt would be able to work in this kind of envi
 
 你是如何雇佣那些你认为能够在这种环境中工作的人？那么，你如何雇佣能够远程工作并以这种方式工作的人？很简单，你让他们为你做一个副业项目。所以你把他们外包出去，他们必须远程工作。因此，通常我喜欢让他们做的项目大约持续一个月，对吧？我可以在一周内更快地完成事情，但通常能很好地了解人们如何管理自己以及从这样的项目中完成工作。所以这始终是第一个评估。就像我们从不只通过面试来做任何事情。我们必须筛选的另一件事是他们处理客户支持的能力。因为并非每个工程师都有处理这种压力的同理心技能。所以有时候我会在面试中让人们给我写分手信。就像，嘿，假装你必须和我分手，你有15分钟的时间在上面写，而且只能手写，你会说什么？这样你就能很好地了解他们的写作技巧，因为客户支持中90%的工作是告诉他们坏消息，比如，哦，我们不支持那个功能，抱歉那行不通，或者那将不可用。所以人们必须在这方面有一定的技巧。
 
- of ones that didn't work out?]
+of ones that didn't work out?]
 
 How about one more question? Are there any experiments to help the company that didn't work out? All right, I'll talk about one. So one of the things that we did early on to try to motivate ourselves was to understand this idea of crunch mode and that it's really bad for people. If you're doing the subscription business, you need people to last for the long term. In video games, they often crunch people all the time for specific deadlines or have multiple sprints every two weeks where you have to shoot up to this deadline, and it's exhausting. When it's happening, you might get an increase in productivity, but the recovery period that you need for people is always greater than the productivity you gain. At a company where you need everyone doing customer support, being on their game, and constantly pushing out features, you don't have time for recovery. So we were thinking about building a company vacation into how Wufoo works to reward our users every single year. We said if the vacation is built in there for recovery, we could have one crunch period before that vacation setup. The way we did the very first crunch mode is that it was just between the three founders, and we had each of us draw a ten-item to-do list that would be fairly aggressive.
 

@@ -1,7 +1,7 @@
 ---
 title: 'Startup lecture 6'
 publishDate: 2025-09-29
-description: 'TODO'
+description: 'Growth strategies and retention-driven approach to startup success'
 tags:
   - Startup
 language: 'English'

@@ -1,6 +1,6 @@
 ---
 title: 'Startup lecture 13'
-publishDate: 2025-09-29
+publishDate: 2025-10-06
 description: 'TODO'
 tags:
   - Startup
