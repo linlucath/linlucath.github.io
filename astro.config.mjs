@@ -2,7 +2,7 @@
 
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 import vercel from '@astrojs/vercel'
-import vercelStatic from '@astrojs/vercel/static'
+// import vercelStatic from '@astrojs/vercel/static'
 import AstroPureIntegration from 'astro-pure'
 import { defineConfig } from 'astro/config'
 import rehypeKatex from 'rehype-katex'
@@ -13,9 +13,9 @@ import UnoCSS from 'unocss/astro'
 // import { visualizer } from 'rollup-plugin-visualizer'
 
 // Local integrations
-import { outputCopier } from './src/plugins/output-copier.ts'
+import { outputCopier } from './src/plugins/output-copier.js'
 // Local rehype & remark plugins
-import rehypeAutolinkHeadings from './src/plugins/rehype-auto-link-headings.ts'
+import rehypeAutolinkHeadings from './src/plugins/rehype-auto-link-headings.js'
 // Shiki
 import {
   addCopyButton,
@@ -24,8 +24,8 @@ import {
   transformerNotationDiff,
   transformerNotationHighlight,
   updateStyle
-} from './src/plugins/shiki-transformers.ts'
-import config from './src/site.config.ts'
+} from './src/plugins/shiki-transformers.js'
+import config from './src/site.config.js'
 
 // https://astro.build/config
 export default defineConfig({
@@ -46,7 +46,7 @@ export default defineConfig({
   // adapter: vercel(),
   // output: 'server',
   // 2. Vercel (static)
-  adapter: vercelStatic({}),
+  adapter: vercel(),
   // 3. Local (standalone)
   // adapter: node({ mode: 'standalone' }),
   // output: 'server',

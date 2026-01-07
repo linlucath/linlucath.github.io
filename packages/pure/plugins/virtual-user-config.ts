@@ -1,5 +1,5 @@
 import { resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 import type { AstroConfig, ViteUserConfig } from 'astro'
 
 import type { UserConfig } from '../types/user-config'
@@ -28,7 +28,7 @@ export function vitePluginUserConfig(
    * By default, `base` is the project root directory.
    */
   const resolveId = (id: string, base = root) =>
-    JSON.stringify(id.startsWith('.') ? resolve(fileURLToPath(base), id) : id)
+    JSON.stringify(id.startsWith('.') ? pathToFileURL(resolve(fileURLToPath(base), id)).href : id)
 
   /** Map of virtual module names to their code contents as strings. */
   const modules = {

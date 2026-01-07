@@ -1,9 +1,10 @@
 ---
-title: "Probability theary"
+title: "Probability theory"
 publishDate: 2025-10-30
-description: "TODO"
+description: "理解机器学习所必需的概率论基础。涵盖分布、期望和概率推断。"
 tags:
-  - Math
+  - Probability Theory
+  - Mathematics
 language: "Chinese"
 heroImage: { src: "./default.jpg", color: "#D58388" }
 ---
